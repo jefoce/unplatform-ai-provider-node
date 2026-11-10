@@ -1,0 +1,410 @@
+{
+  "id": "00000000-0000-4000-8000-000000000008",
+  "revision": 0,
+  "last_node_id": 3,
+  "last_link_id": 2,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "UPAIModel",
+      "pos": [
+        0,
+        0
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "limits",
+          "type": "UPAI_LIMITS",
+          "link": null
+        },
+        {
+          "name": "id",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "id"
+          }
+        },
+        {
+          "name": "name",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "name"
+          }
+        },
+        {
+          "name": "description",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "description"
+          }
+        },
+        {
+          "name": "kind",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "kind"
+          }
+        },
+        {
+          "name": "enabled",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "enabled"
+          }
+        },
+        {
+          "name": "price_per_run_usd",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "price_per_run_usd"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "UPAI_MODEL",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UPAIModel"
+      },
+      "widgets_values": [
+        "subgraph-image",
+        "Subgraph Image",
+        "",
+        "image",
+        true,
+        0.0
+      ]
+    },
+    {
+      "id": 2,
+      "type": "UPAIOutput",
+      "pos": [
+        260,
+        0
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "UPAI_MODEL",
+          "link": 2
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 1
+        },
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "link": null
+        },
+        {
+          "name": "format",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "format"
+          }
+        },
+        {
+          "name": "crf",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "crf"
+          }
+        },
+        {
+          "name": "preview",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "preview"
+          }
+        },
+        {
+          "name": "upai_job",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "upai_job"
+          }
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "UPAIOutput"
+      },
+      "widgets_values": [
+        "png",
+        0,
+        true,
+        ""
+      ]
+    },
+    {
+      "id": 3,
+      "type": "sg-invert",
+      "pos": [
+        520,
+        0
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "sg-invert"
+      },
+      "widgets_values": []
+    }
+  ],
+  "links": [
+    [
+      1,
+      3,
+      0,
+      2,
+      1,
+      "IMAGE"
+    ],
+    [
+      2,
+      1,
+      0,
+      2,
+      0,
+      "UPAI_MODEL"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4,
+  "definitions": {
+    "subgraphs": [
+      {
+        "id": "sg-invert",
+        "version": 1,
+        "state": {
+          "lastGroupId": 0,
+          "lastNodeId": 2,
+          "lastLinkId": 2,
+          "lastRerouteId": 0
+        },
+        "revision": 0,
+        "config": {},
+        "name": "Invert",
+        "description": "",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            0,
+            0,
+            120,
+            60
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            300,
+            0,
+            120,
+            60
+          ]
+        },
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "out-image",
+            "name": "IMAGE",
+            "type": "IMAGE",
+            "linkIds": [
+              2
+            ],
+            "localized_name": "IMAGE",
+            "pos": [
+              300,
+              20
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 1,
+            "type": "EmptyImage",
+            "pos": [
+              0,
+              0
+            ],
+            "size": [
+              220,
+              140
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [
+              {
+                "name": "width",
+                "type": "INT",
+                "link": null,
+                "widget": {
+                  "name": "width"
+                }
+              },
+              {
+                "name": "height",
+                "type": "INT",
+                "link": null,
+                "widget": {
+                  "name": "height"
+                }
+              },
+              {
+                "name": "batch_size",
+                "type": "INT",
+                "link": null,
+                "widget": {
+                  "name": "batch_size"
+                }
+              },
+              {
+                "name": "color",
+                "type": "INT",
+                "link": null,
+                "widget": {
+                  "name": "color"
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "links": [
+                  1
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "EmptyImage"
+            },
+            "widgets_values": [
+              64,
+              64,
+              1,
+              0
+            ]
+          },
+          {
+            "id": 2,
+            "type": "ImageInvert",
+            "pos": [
+              260,
+              0
+            ],
+            "size": [
+              220,
+              140
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [
+              {
+                "name": "image",
+                "type": "IMAGE",
+                "link": 1
+              }
+            ],
+            "outputs": [
+              {
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "links": [
+                  2
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "ImageInvert"
+            },
+            "widgets_values": []
+          }
+        ],
+        "groups": [],
+        "links": [
+          {
+            "id": 1,
+            "origin_id": 1,
+            "origin_slot": 0,
+            "target_id": 2,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 2,
+            "origin_id": 2,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "IMAGE"
+          }
+        ],
+        "extra": {}
+      }
+    ]
+  }
+}

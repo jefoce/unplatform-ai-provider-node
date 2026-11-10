@@ -1,0 +1,118 @@
+{
+  "1": {
+    "inputs": {
+      "id": "image-single",
+      "name": "Image Single",
+      "description": "",
+      "kind": "image",
+      "enabled": true,
+      "price_per_run_usd": 0.0
+    },
+    "class_type": "UPAIModel",
+    "_meta": {
+      "title": "UPAIModel"
+    }
+  },
+  "2": {
+    "inputs": {
+      "text": "A red square on a plain white background, centered and crisp. ",
+      "negative": "",
+      "required": true,
+      "max_chars": 200
+    },
+    "class_type": "UPAIPrompt",
+    "_meta": {
+      "title": "UPAIPrompt"
+    }
+  },
+  "3": {
+    "inputs": {
+      "resolutions": "512,768",
+      "aspect_ratios": "1:1,16:9",
+      "default_resolution": "512",
+      "default_aspect_ratio": "1:1",
+      "align": 16,
+      "size_overrides": "",
+      "duration_min": 1.0,
+      "duration_max": 4.0,
+      "duration_default": 1.0,
+      "duration_step": 0.25,
+      "fps": 8.0,
+      "frame_mod": 4,
+      "frame_add": 1,
+      "count_max": 4,
+      "count_mode": "batch",
+      "test_resolution": "512",
+      "test_aspect_ratio": "1:1",
+      "test_duration": 1.0,
+      "test_count": 1,
+      "test_seed": 0
+    },
+    "class_type": "UPAISettings",
+    "_meta": {
+      "title": "UPAISettings"
+    }
+  },
+  "4": {
+    "inputs": {
+      "width": [
+        "5",
+        0
+      ],
+      "height": 64,
+      "batch_size": [
+        "3",
+        5
+      ],
+      "color": 0
+    },
+    "class_type": "EmptyImage",
+    "_meta": {
+      "title": "EmptyImage"
+    }
+  },
+  "5": {
+    "inputs": {
+      "string": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "StringLength",
+    "_meta": {
+      "title": "StringLength"
+    }
+  },
+  "6": {
+    "inputs": {
+      "image": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "7": {
+    "inputs": {
+      "format": "png",
+      "crf": 0,
+      "preview": true,
+      "upai_job": "",
+      "model": [
+        "1",
+        0
+      ],
+      "images": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "UPAIOutput",
+    "_meta": {
+      "title": "UPAIOutput"
+    }
+  }
+}

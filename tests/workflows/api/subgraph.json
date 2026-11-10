@@ -1,0 +1,60 @@
+{
+  "1": {
+    "inputs": {
+      "id": "subgraph-image",
+      "name": "Subgraph Image",
+      "description": "",
+      "kind": "image",
+      "enabled": true,
+      "price_per_run_usd": 0.0
+    },
+    "class_type": "UPAIModel",
+    "_meta": {
+      "title": "UPAIModel"
+    }
+  },
+  "2": {
+    "inputs": {
+      "format": "png",
+      "crf": 0,
+      "preview": true,
+      "upai_job": "",
+      "images": [
+        "3:2",
+        0
+      ],
+      "model": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "UPAIOutput",
+    "_meta": {
+      "title": "UPAIOutput"
+    }
+  },
+  "3:1": {
+    "inputs": {
+      "width": 64,
+      "height": 64,
+      "batch_size": 1,
+      "color": 0
+    },
+    "class_type": "EmptyImage",
+    "_meta": {
+      "title": "EmptyImage"
+    }
+  },
+  "3:2": {
+    "inputs": {
+      "image": [
+        "3:1",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:upai:1:job",
+  "title": "upai/1 job",
+  "type": "object",
+  "required": [
+    "id",
+    "kind",
+    "model",
+    "status",
+    "progress",
+    "seed",
+    "urls",
+    "error",
+    "usage",
+    "created_at",
+    "started_at",
+    "finished_at",
+    "expires_at"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+    },
+    "kind": {
+      "enum": [
+        "video",
+        "image"
+      ]
+    },
+    "model": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "pending",
+        "in_progress",
+        "completed",
+        "failed",
+        "cancelled",
+        "expired"
+      ]
+    },
+    "progress": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/progress"
+        }
+      ]
+    },
+    "seed": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 2147483647
+    },
+    "urls": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      ]
+    },
+    "error": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "usage": {
+      "type": "object",
+      "required": [
+        "cost"
+      ],
+      "properties": {
+        "cost": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": true
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "started_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "finished_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "expires_at": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "progress": {
+      "type": "object",
+      "required": [
+        "percent"
+      ],
+      "properties": {
+        "percent": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "node": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "max": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "queue_position": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "waiting_on": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "enum": [
+                "pack_queue",
+                "comfyui_busy"
+              ]
+            }
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

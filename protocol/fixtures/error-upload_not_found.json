@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": "upload_not_found",
+    "message": "upload not found",
+    "details": {}
+  }
+}

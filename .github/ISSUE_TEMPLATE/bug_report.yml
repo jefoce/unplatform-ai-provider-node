@@ -1,0 +1,66 @@
+name: Bug report
+description: Report a problem with the Unplatform AI Provider node pack.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not paste tokens, data URLs, upload bytes or full prompt text.
+  - type: input
+    id: pack-version
+    attributes:
+      label: Pack version
+      description: Version shown by the UPAI Settings node or pyproject.toml.
+    validations:
+      required: true
+  - type: input
+    id: comfyui-version
+    attributes:
+      label: ComfyUI version
+      description: Version shown at ComfyUI startup.
+    validations:
+      required: true
+  - type: input
+    id: frontend-version
+    attributes:
+      label: Frontend version
+      description: comfyui-frontend-package version.
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      description: Operating system and version.
+    validations:
+      required: true
+  - type: input
+    id: gpu
+    attributes:
+      label: GPU
+      description: GPU model and backend (CUDA, ROCm, MPS, CPU).
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Workflow or the UPAI part
+      description: Attach the workflow JSON or paste the UPAI nodes part.
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: ComfyUI log lines containing `upai`
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened
+      description: What you expected and what happened instead.
+    validations:
+      required: true

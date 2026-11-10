@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "id": "broken-image",
+      "name": "Broken Image",
+      "description": "",
+      "kind": "image",
+      "status": "invalid",
+      "status_reason": "node class KSampler is not installed",
+      "updated_at": "2026-11-06T12:00:00Z",
+      "pricing": {
+        "per_run_usd": 0
+      },
+      "capabilities": {
+        "prompt": {
+          "required": true,
+          "max_chars": 4000
+        },
+        "negative_prompt": false,
+        "references": {
+          "image": {
+            "max": 0,
+            "required": 0
+          },
+          "video": {
+            "max": 0,
+            "required": 0
+          },
+          "audio": {
+            "max": 0,
+            "required": 0
+          }
+        },
+        "resolutions": [
+          "1K"
+        ],
+        "default_resolution": "1K",
+        "aspect_ratios": [
+          "1:1"
+        ],
+        "default_aspect_ratio": "1:1",
+        "sizes": {
+          "1K": {
+            "1:1": "1024x1024"
+          }
+        },
+        "seed": true,
+        "reference_limits": {
+          "image": {
+            "max_bytes": 20971520,
+            "formats": [
+              "png",
+              "jpg",
+              "jpeg",
+              "webp"
+            ]
+          }
+        },
+        "count": {
+          "max": 1
+        }
+      }
+    }
+  ]
+}

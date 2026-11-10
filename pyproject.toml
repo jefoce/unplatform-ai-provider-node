@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unplatform-ai-provider-node"
+version = "0.1.0"
+description = "ComfyUI node pack that serves tagged workflows over the upai/1 HTTP protocol."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+
+[tool.setuptools]
+packages = ["upai_provider", "upai_provider.protocol", "upai_provider.endpoints", "upai_provider.nodes"]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-aiohttp", "jsonschema", "ruff", "pyright", "fonttools"]
+
+[project.urls]
+Repository = "https://github.com/jefoce/unplatform-ai-provider-node"
+
+[tool.comfy]
+PublisherId = "jefoce"
+DisplayName = "Unplatform AI Provider"
+Icon = "https://raw.githubusercontent.com/jefoce/unplatform-ai-provider-node/releases/docs/images/registry-icon.png"
+requires-comfyui = ">=0.43.0"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B", "UP", "N", "S", "T20", "SIM"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101"]
+# The ComfyUI node directory name contains hyphens, so its package name is not a valid module name.
+"**/__init__.py" = ["N999"]
+
+[tool.pyright]
+typeCheckingMode = "basic"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+addopts = "--import-mode=importlib --confcutdir=tests"
+pythonpath = ["tests"]
+testpaths = ["tests"]
+markers = ["comfy: end to end tests against a real ComfyUI"]

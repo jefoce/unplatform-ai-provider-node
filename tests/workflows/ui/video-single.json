@@ -1,0 +1,795 @@
+{
+  "id": "00000000-0000-4000-8000-000000000012",
+  "revision": 0,
+  "last_node_id": 8,
+  "last_link_id": 8,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "UPAIModel",
+      "pos": [
+        0,
+        0
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "limits",
+          "type": "UPAI_LIMITS",
+          "link": null
+        },
+        {
+          "name": "id",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "id"
+          }
+        },
+        {
+          "name": "name",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "name"
+          }
+        },
+        {
+          "name": "description",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "description"
+          }
+        },
+        {
+          "name": "kind",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "kind"
+          }
+        },
+        {
+          "name": "enabled",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "enabled"
+          }
+        },
+        {
+          "name": "price_per_run_usd",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "price_per_run_usd"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "UPAI_MODEL",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UPAIModel"
+      },
+      "widgets_values": [
+        "video-single",
+        "Video Single",
+        "",
+        "video",
+        true,
+        0.0
+      ]
+    },
+    {
+      "id": 2,
+      "type": "UPAIPrompt",
+      "pos": [
+        260,
+        0
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "text"
+          }
+        },
+        {
+          "name": "negative",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "negative"
+          }
+        },
+        {
+          "name": "required",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "required"
+          }
+        },
+        {
+          "name": "max_chars",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "max_chars"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "links": [
+            2
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UPAIPrompt"
+      },
+      "widgets_values": [
+        "A blue circle moves across a plain white background.",
+        "",
+        true,
+        200
+      ]
+    },
+    {
+      "id": 3,
+      "type": "UPAISettings",
+      "pos": [
+        520,
+        0
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "resolutions",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "resolutions"
+          }
+        },
+        {
+          "name": "aspect_ratios",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "aspect_ratios"
+          }
+        },
+        {
+          "name": "default_resolution",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "default_resolution"
+          }
+        },
+        {
+          "name": "default_aspect_ratio",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "default_aspect_ratio"
+          }
+        },
+        {
+          "name": "align",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "align"
+          }
+        },
+        {
+          "name": "size_overrides",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "size_overrides"
+          }
+        },
+        {
+          "name": "duration_min",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "duration_min"
+          }
+        },
+        {
+          "name": "duration_max",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "duration_max"
+          }
+        },
+        {
+          "name": "duration_default",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "duration_default"
+          }
+        },
+        {
+          "name": "duration_step",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "duration_step"
+          }
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "fps"
+          }
+        },
+        {
+          "name": "frame_mod",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "frame_mod"
+          }
+        },
+        {
+          "name": "frame_add",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "frame_add"
+          }
+        },
+        {
+          "name": "count_max",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "count_max"
+          }
+        },
+        {
+          "name": "count_mode",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "count_mode"
+          }
+        },
+        {
+          "name": "test_resolution",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "test_resolution"
+          }
+        },
+        {
+          "name": "test_aspect_ratio",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "test_aspect_ratio"
+          }
+        },
+        {
+          "name": "test_duration",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "test_duration"
+          }
+        },
+        {
+          "name": "test_count",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "test_count"
+          }
+        },
+        {
+          "name": "test_seed",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "test_seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "frames",
+          "type": "INT",
+          "links": [
+            4
+          ]
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "links": [
+            7
+          ]
+        },
+        {
+          "name": "duration",
+          "type": "FLOAT",
+          "links": []
+        },
+        {
+          "name": "count",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UPAISettings"
+      },
+      "widgets_values": [
+        "512,768",
+        "1:1,16:9",
+        "512",
+        "1:1",
+        16,
+        "",
+        0.5,
+        2.0,
+        0.5,
+        0.25,
+        8.0,
+        4,
+        1,
+        4,
+        "batch",
+        "512",
+        "1:1",
+        0.5,
+        1,
+        0
+      ]
+    },
+    {
+      "id": 4,
+      "type": "EmptyImage",
+      "pos": [
+        780,
+        0
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 3,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "height"
+          }
+        },
+        {
+          "name": "batch_size",
+          "type": "INT",
+          "link": 4,
+          "widget": {
+            "name": "batch_size"
+          }
+        },
+        {
+          "name": "color",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "color"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyImage"
+      },
+      "widgets_values": [
+        64,
+        64,
+        4,
+        0
+      ]
+    },
+    {
+      "id": 5,
+      "type": "StringLength",
+      "pos": [
+        0,
+        180
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string",
+          "type": "STRING",
+          "link": 2,
+          "widget": {
+            "name": "string"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "length",
+          "type": "INT",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringLength"
+      },
+      "widgets_values": [
+        "A blue circle moves across a plain white background."
+      ]
+    },
+    {
+      "id": 6,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        180
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 7,
+      "type": "CreateVideo",
+      "pos": [
+        520,
+        180
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 6
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "link": 7,
+          "widget": {
+            "name": "fps"
+          }
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "bit_depth",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "bit_depth"
+          }
+        },
+        {
+          "name": "color_space",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "color_space"
+          }
+        },
+        {
+          "name": "chroma_subsampling",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "chroma_subsampling"
+          }
+        },
+        {
+          "name": "codec",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "codec"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo"
+      },
+      "widgets_values": [
+        8.0,
+        "auto",
+        "sRGB",
+        "auto",
+        "none"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "UPAIOutput",
+      "pos": [
+        780,
+        180
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "UPAI_MODEL",
+          "link": 1
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 8
+        },
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "link": null
+        },
+        {
+          "name": "format",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "format"
+          }
+        },
+        {
+          "name": "crf",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "crf"
+          }
+        },
+        {
+          "name": "preview",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "preview"
+          }
+        },
+        {
+          "name": "upai_job",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "upai_job"
+          }
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "UPAIOutput"
+      },
+      "widgets_values": [
+        "mp4",
+        23,
+        true,
+        ""
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      8,
+      0,
+      "UPAI_MODEL"
+    ],
+    [
+      2,
+      2,
+      0,
+      5,
+      0,
+      "STRING"
+    ],
+    [
+      3,
+      5,
+      0,
+      4,
+      0,
+      "INT"
+    ],
+    [
+      4,
+      3,
+      2,
+      4,
+      2,
+      "INT"
+    ],
+    [
+      5,
+      4,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      6,
+      6,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      7,
+      3,
+      3,
+      7,
+      1,
+      "FLOAT"
+    ],
+    [
+      8,
+      7,
+      0,
+      8,
+      1,
+      "VIDEO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

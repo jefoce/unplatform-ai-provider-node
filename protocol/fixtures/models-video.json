@@ -1,0 +1,182 @@
+{
+  "data": [
+    {
+      "id": "wan22-i2v",
+      "name": "Wan 2.2 I2V (local)",
+      "description": "",
+      "kind": "video",
+      "status": "ready",
+      "status_reason": null,
+      "updated_at": "2026-11-05T12:00:00Z",
+      "pricing": {
+        "per_run_usd": 0
+      },
+      "capabilities": {
+        "prompt": {
+          "required": true,
+          "max_chars": 4000,
+          "reference_label": "<{kind}_{n}>",
+          "reference_labels": {
+            "image": "<Picture {n}>",
+            "video": "<Video {n}>",
+            "audio": "<Audio {n}>"
+          }
+        },
+        "negative_prompt": false,
+        "references": {
+          "image": {
+            "max": 2,
+            "required": 0
+          },
+          "video": {
+            "max": 0,
+            "required": 0
+          },
+          "audio": {
+            "max": 0,
+            "required": 0
+          }
+        },
+        "resolutions": [
+          "480p",
+          "720p"
+        ],
+        "default_resolution": "480p",
+        "aspect_ratios": [
+          "16:9",
+          "9:16",
+          "1:1"
+        ],
+        "default_aspect_ratio": "16:9",
+        "sizes": {
+          "480p": {
+            "16:9": "832x480",
+            "9:16": "480x832",
+            "1:1": "624x624"
+          },
+          "720p": {
+            "16:9": "1280x720",
+            "9:16": "720x1280",
+            "1:1": "960x960"
+          }
+        },
+        "seed": true,
+        "reference_limits": {
+          "image": {
+            "max_bytes": 20971520,
+            "formats": [
+              "png",
+              "jpg",
+              "jpeg",
+              "webp"
+            ]
+          }
+        },
+        "frames": {
+          "start": true,
+          "end": false,
+          "start_required": true,
+          "end_required": false
+        },
+        "duration": {
+          "min": 2,
+          "max": 5,
+          "default": 5,
+          "step": 1
+        },
+        "fps": 16,
+        "frame_rule": {
+          "mod": 4,
+          "add": 1
+        },
+        "audio_output": false
+      }
+    },
+    {
+      "id": "wan22-t2v",
+      "name": "Wan 2.2 T2V (local)",
+      "description": "",
+      "kind": "video",
+      "status": "ready",
+      "status_reason": null,
+      "updated_at": "2026-11-05T12:00:00Z",
+      "pricing": {
+        "per_run_usd": 0
+      },
+      "capabilities": {
+        "prompt": {
+          "required": true,
+          "max_chars": 4000
+        },
+        "negative_prompt": false,
+        "references": {
+          "image": {
+            "max": 0,
+            "required": 0
+          },
+          "video": {
+            "max": 0,
+            "required": 0
+          },
+          "audio": {
+            "max": 0,
+            "required": 0
+          }
+        },
+        "resolutions": [
+          "480p",
+          "720p"
+        ],
+        "default_resolution": "480p",
+        "aspect_ratios": [
+          "16:9",
+          "9:16",
+          "1:1"
+        ],
+        "default_aspect_ratio": "16:9",
+        "sizes": {
+          "480p": {
+            "16:9": "832x480",
+            "9:16": "480x832",
+            "1:1": "624x624"
+          },
+          "720p": {
+            "16:9": "1280x720",
+            "9:16": "720x1280",
+            "1:1": "960x960"
+          }
+        },
+        "seed": true,
+        "reference_limits": {
+          "image": {
+            "max_bytes": 20971520,
+            "formats": [
+              "png",
+              "jpg",
+              "jpeg",
+              "webp"
+            ]
+          }
+        },
+        "frames": {
+          "start": false,
+          "end": false,
+          "start_required": false,
+          "end_required": false
+        },
+        "duration": {
+          "min": 2,
+          "max": 5,
+          "default": 5,
+          "step": 1
+        },
+        "fps": 16,
+        "frame_rule": {
+          "mod": 4,
+          "add": 1
+        },
+        "audio_output": false
+      }
+    }
+  ]
+}

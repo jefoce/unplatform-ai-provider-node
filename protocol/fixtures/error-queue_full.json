@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": "queue_full",
+    "message": "too many pending jobs",
+    "details": {}
+  }
+}

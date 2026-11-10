@@ -1,0 +1,9 @@
+{
+  "error": {
+    "code": "workflow_invalid",
+    "message": "workflow rejected by the backend",
+    "details": {
+      "node_errors": {}
+    }
+  }
+}

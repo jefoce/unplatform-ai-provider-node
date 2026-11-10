@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": "forbidden",
+    "message": "origin is not allowed",
+    "details": {}
+  }
+}

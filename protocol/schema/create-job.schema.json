@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:upai:1:create-job",
+  "title": "upai/1 created job",
+  "type": "object",
+  "required": [
+    "id",
+    "status",
+    "polling_url"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+    },
+    "status": {
+      "const": "pending"
+    },
+    "polling_url": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

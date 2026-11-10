@@ -1,0 +1,3026 @@
+{
+  "1": {
+    "inputs": {
+      "width": 4096,
+      "height": 4096,
+      "batch_size": 1,
+      "color": 0
+    },
+    "class_type": "EmptyImage",
+    "_meta": {
+      "title": "EmptyImage"
+    }
+  },
+  "2": {
+    "inputs": {
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "3": {
+    "inputs": {
+      "image": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "4": {
+    "inputs": {
+      "image": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "5": {
+    "inputs": {
+      "image": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "6": {
+    "inputs": {
+      "image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "7": {
+    "inputs": {
+      "image": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "8": {
+    "inputs": {
+      "image": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "9": {
+    "inputs": {
+      "image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "10": {
+    "inputs": {
+      "image": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "11": {
+    "inputs": {
+      "image": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "12": {
+    "inputs": {
+      "image": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "13": {
+    "inputs": {
+      "image": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "14": {
+    "inputs": {
+      "image": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "15": {
+    "inputs": {
+      "image": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "16": {
+    "inputs": {
+      "image": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "17": {
+    "inputs": {
+      "image": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "18": {
+    "inputs": {
+      "image": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "19": {
+    "inputs": {
+      "image": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "20": {
+    "inputs": {
+      "image": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "21": {
+    "inputs": {
+      "image": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "22": {
+    "inputs": {
+      "image": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "23": {
+    "inputs": {
+      "image": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "24": {
+    "inputs": {
+      "image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "25": {
+    "inputs": {
+      "image": [
+        "24",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "26": {
+    "inputs": {
+      "image": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "27": {
+    "inputs": {
+      "image": [
+        "26",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "28": {
+    "inputs": {
+      "image": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "29": {
+    "inputs": {
+      "image": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "30": {
+    "inputs": {
+      "image": [
+        "29",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "31": {
+    "inputs": {
+      "image": [
+        "30",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "32": {
+    "inputs": {
+      "image": [
+        "31",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "33": {
+    "inputs": {
+      "image": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "34": {
+    "inputs": {
+      "image": [
+        "33",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "35": {
+    "inputs": {
+      "image": [
+        "34",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "36": {
+    "inputs": {
+      "image": [
+        "35",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "37": {
+    "inputs": {
+      "image": [
+        "36",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "38": {
+    "inputs": {
+      "image": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "39": {
+    "inputs": {
+      "image": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "40": {
+    "inputs": {
+      "image": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "41": {
+    "inputs": {
+      "image": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "42": {
+    "inputs": {
+      "image": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "43": {
+    "inputs": {
+      "image": [
+        "42",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "44": {
+    "inputs": {
+      "image": [
+        "43",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "45": {
+    "inputs": {
+      "image": [
+        "44",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "46": {
+    "inputs": {
+      "image": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "47": {
+    "inputs": {
+      "image": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "48": {
+    "inputs": {
+      "image": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "49": {
+    "inputs": {
+      "image": [
+        "48",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "50": {
+    "inputs": {
+      "image": [
+        "49",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "51": {
+    "inputs": {
+      "image": [
+        "50",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "52": {
+    "inputs": {
+      "image": [
+        "51",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "53": {
+    "inputs": {
+      "image": [
+        "52",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "54": {
+    "inputs": {
+      "image": [
+        "53",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "55": {
+    "inputs": {
+      "image": [
+        "54",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "56": {
+    "inputs": {
+      "image": [
+        "55",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "57": {
+    "inputs": {
+      "image": [
+        "56",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "58": {
+    "inputs": {
+      "image": [
+        "57",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "59": {
+    "inputs": {
+      "image": [
+        "58",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "60": {
+    "inputs": {
+      "image": [
+        "59",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "61": {
+    "inputs": {
+      "image": [
+        "60",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "62": {
+    "inputs": {
+      "image": [
+        "61",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "63": {
+    "inputs": {
+      "image": [
+        "62",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "64": {
+    "inputs": {
+      "image": [
+        "63",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "65": {
+    "inputs": {
+      "image": [
+        "64",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "66": {
+    "inputs": {
+      "image": [
+        "65",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "67": {
+    "inputs": {
+      "image": [
+        "66",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "68": {
+    "inputs": {
+      "image": [
+        "67",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "69": {
+    "inputs": {
+      "image": [
+        "68",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "70": {
+    "inputs": {
+      "image": [
+        "69",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "71": {
+    "inputs": {
+      "image": [
+        "70",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "72": {
+    "inputs": {
+      "image": [
+        "71",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "73": {
+    "inputs": {
+      "image": [
+        "72",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "74": {
+    "inputs": {
+      "image": [
+        "73",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "75": {
+    "inputs": {
+      "image": [
+        "74",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "76": {
+    "inputs": {
+      "image": [
+        "75",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "77": {
+    "inputs": {
+      "image": [
+        "76",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "78": {
+    "inputs": {
+      "image": [
+        "77",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "79": {
+    "inputs": {
+      "image": [
+        "78",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "80": {
+    "inputs": {
+      "image": [
+        "79",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "81": {
+    "inputs": {
+      "image": [
+        "80",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "82": {
+    "inputs": {
+      "image": [
+        "81",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "83": {
+    "inputs": {
+      "image": [
+        "82",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "84": {
+    "inputs": {
+      "image": [
+        "83",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "85": {
+    "inputs": {
+      "image": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "86": {
+    "inputs": {
+      "image": [
+        "85",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "87": {
+    "inputs": {
+      "image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "88": {
+    "inputs": {
+      "image": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "89": {
+    "inputs": {
+      "image": [
+        "88",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "90": {
+    "inputs": {
+      "image": [
+        "89",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "91": {
+    "inputs": {
+      "image": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "92": {
+    "inputs": {
+      "image": [
+        "91",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "93": {
+    "inputs": {
+      "image": [
+        "92",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "94": {
+    "inputs": {
+      "image": [
+        "93",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "95": {
+    "inputs": {
+      "image": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "96": {
+    "inputs": {
+      "image": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "98": {
+    "inputs": {
+      "image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "99": {
+    "inputs": {
+      "image": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "100": {
+    "inputs": {
+      "image": [
+        "99",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "101": {
+    "inputs": {
+      "image": [
+        "100",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "102": {
+    "inputs": {
+      "image": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "103": {
+    "inputs": {
+      "image": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "104": {
+    "inputs": {
+      "image": [
+        "103",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "105": {
+    "inputs": {
+      "image": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "106": {
+    "inputs": {
+      "image": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "107": {
+    "inputs": {
+      "image": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "108": {
+    "inputs": {
+      "image": [
+        "107",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "109": {
+    "inputs": {
+      "image": [
+        "108",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "110": {
+    "inputs": {
+      "image": [
+        "109",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "111": {
+    "inputs": {
+      "image": [
+        "110",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "112": {
+    "inputs": {
+      "image": [
+        "111",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "113": {
+    "inputs": {
+      "image": [
+        "112",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "114": {
+    "inputs": {
+      "image": [
+        "113",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "115": {
+    "inputs": {
+      "image": [
+        "114",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "116": {
+    "inputs": {
+      "image": [
+        "115",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "117": {
+    "inputs": {
+      "image": [
+        "116",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "118": {
+    "inputs": {
+      "image": [
+        "117",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "119": {
+    "inputs": {
+      "image": [
+        "118",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "120": {
+    "inputs": {
+      "image": [
+        "119",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "121": {
+    "inputs": {
+      "image": [
+        "120",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "122": {
+    "inputs": {
+      "image": [
+        "121",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "123": {
+    "inputs": {
+      "image": [
+        "122",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "124": {
+    "inputs": {
+      "image": [
+        "123",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "125": {
+    "inputs": {
+      "image": [
+        "124",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "126": {
+    "inputs": {
+      "image": [
+        "125",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "127": {
+    "inputs": {
+      "image": [
+        "126",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "128": {
+    "inputs": {
+      "image": [
+        "127",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "129": {
+    "inputs": {
+      "image": [
+        "128",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "130": {
+    "inputs": {
+      "image": [
+        "129",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "131": {
+    "inputs": {
+      "image": [
+        "130",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "132": {
+    "inputs": {
+      "image": [
+        "131",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "133": {
+    "inputs": {
+      "image": [
+        "132",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "134": {
+    "inputs": {
+      "image": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "135": {
+    "inputs": {
+      "image": [
+        "134",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "136": {
+    "inputs": {
+      "image": [
+        "135",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "137": {
+    "inputs": {
+      "image": [
+        "136",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "138": {
+    "inputs": {
+      "image": [
+        "137",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "139": {
+    "inputs": {
+      "image": [
+        "138",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "140": {
+    "inputs": {
+      "image": [
+        "139",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "141": {
+    "inputs": {
+      "image": [
+        "140",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "142": {
+    "inputs": {
+      "image": [
+        "141",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "143": {
+    "inputs": {
+      "image": [
+        "142",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "144": {
+    "inputs": {
+      "image": [
+        "143",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "145": {
+    "inputs": {
+      "image": [
+        "144",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "146": {
+    "inputs": {
+      "image": [
+        "145",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "147": {
+    "inputs": {
+      "image": [
+        "146",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "148": {
+    "inputs": {
+      "image": [
+        "147",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "149": {
+    "inputs": {
+      "image": [
+        "148",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "150": {
+    "inputs": {
+      "image": [
+        "149",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "151": {
+    "inputs": {
+      "image": [
+        "150",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "152": {
+    "inputs": {
+      "image": [
+        "151",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "153": {
+    "inputs": {
+      "image": [
+        "152",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "154": {
+    "inputs": {
+      "image": [
+        "153",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "155": {
+    "inputs": {
+      "image": [
+        "154",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "156": {
+    "inputs": {
+      "image": [
+        "155",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "157": {
+    "inputs": {
+      "image": [
+        "156",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "158": {
+    "inputs": {
+      "image": [
+        "157",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "159": {
+    "inputs": {
+      "image": [
+        "158",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "160": {
+    "inputs": {
+      "image": [
+        "159",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "161": {
+    "inputs": {
+      "image": [
+        "160",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "162": {
+    "inputs": {
+      "image": [
+        "161",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "163": {
+    "inputs": {
+      "image": [
+        "162",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "164": {
+    "inputs": {
+      "image": [
+        "163",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "165": {
+    "inputs": {
+      "image": [
+        "164",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "166": {
+    "inputs": {
+      "image": [
+        "165",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "167": {
+    "inputs": {
+      "image": [
+        "166",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "168": {
+    "inputs": {
+      "image": [
+        "167",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "169": {
+    "inputs": {
+      "image": [
+        "168",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "170": {
+    "inputs": {
+      "image": [
+        "169",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "171": {
+    "inputs": {
+      "image": [
+        "170",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "172": {
+    "inputs": {
+      "image": [
+        "171",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "173": {
+    "inputs": {
+      "image": [
+        "172",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "174": {
+    "inputs": {
+      "image": [
+        "173",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "175": {
+    "inputs": {
+      "image": [
+        "174",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "176": {
+    "inputs": {
+      "image": [
+        "175",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "177": {
+    "inputs": {
+      "image": [
+        "176",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "178": {
+    "inputs": {
+      "image": [
+        "177",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "179": {
+    "inputs": {
+      "image": [
+        "178",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "180": {
+    "inputs": {
+      "image": [
+        "179",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "181": {
+    "inputs": {
+      "image": [
+        "180",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "182": {
+    "inputs": {
+      "image": [
+        "181",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "183": {
+    "inputs": {
+      "image": [
+        "182",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "184": {
+    "inputs": {
+      "image": [
+        "183",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "185": {
+    "inputs": {
+      "image": [
+        "184",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "186": {
+    "inputs": {
+      "image": [
+        "185",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "187": {
+    "inputs": {
+      "image": [
+        "186",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "188": {
+    "inputs": {
+      "image": [
+        "187",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "189": {
+    "inputs": {
+      "image": [
+        "188",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "190": {
+    "inputs": {
+      "image": [
+        "189",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "191": {
+    "inputs": {
+      "image": [
+        "190",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "192": {
+    "inputs": {
+      "image": [
+        "191",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "193": {
+    "inputs": {
+      "image": [
+        "192",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "194": {
+    "inputs": {
+      "image": [
+        "193",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "195": {
+    "inputs": {
+      "image": [
+        "194",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "196": {
+    "inputs": {
+      "image": [
+        "195",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "197": {
+    "inputs": {
+      "image": [
+        "196",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "198": {
+    "inputs": {
+      "image": [
+        "197",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "199": {
+    "inputs": {
+      "image": [
+        "198",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "200": {
+    "inputs": {
+      "image": [
+        "199",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "201": {
+    "inputs": {
+      "image": [
+        "200",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "202": {
+    "inputs": {
+      "image": [
+        "201",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "203": {
+    "inputs": {
+      "image": [
+        "202",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "204": {
+    "inputs": {
+      "image": [
+        "203",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "205": {
+    "inputs": {
+      "image": [
+        "204",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "206": {
+    "inputs": {
+      "image": [
+        "205",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "207": {
+    "inputs": {
+      "image": [
+        "206",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "208": {
+    "inputs": {
+      "image": [
+        "207",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "209": {
+    "inputs": {
+      "image": [
+        "208",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "210": {
+    "inputs": {
+      "image": [
+        "209",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "211": {
+    "inputs": {
+      "image": [
+        "210",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "212": {
+    "inputs": {
+      "image": [
+        "211",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "213": {
+    "inputs": {
+      "image": [
+        "212",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "214": {
+    "inputs": {
+      "image": [
+        "213",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "215": {
+    "inputs": {
+      "image": [
+        "214",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "216": {
+    "inputs": {
+      "image": [
+        "215",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "217": {
+    "inputs": {
+      "image": [
+        "216",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "218": {
+    "inputs": {
+      "image": [
+        "217",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "219": {
+    "inputs": {
+      "image": [
+        "218",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "220": {
+    "inputs": {
+      "image": [
+        "219",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "221": {
+    "inputs": {
+      "image": [
+        "220",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "222": {
+    "inputs": {
+      "image": [
+        "221",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "223": {
+    "inputs": {
+      "image": [
+        "222",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "224": {
+    "inputs": {
+      "image": [
+        "223",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "225": {
+    "inputs": {
+      "image": [
+        "224",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "226": {
+    "inputs": {
+      "image": [
+        "225",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "227": {
+    "inputs": {
+      "image": [
+        "226",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "228": {
+    "inputs": {
+      "image": [
+        "227",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "229": {
+    "inputs": {
+      "image": [
+        "228",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "230": {
+    "inputs": {
+      "image": [
+        "229",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "231": {
+    "inputs": {
+      "image": [
+        "230",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "232": {
+    "inputs": {
+      "image": [
+        "231",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "233": {
+    "inputs": {
+      "image": [
+        "232",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "234": {
+    "inputs": {
+      "image": [
+        "233",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "235": {
+    "inputs": {
+      "image": [
+        "234",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "236": {
+    "inputs": {
+      "image": [
+        "235",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "237": {
+    "inputs": {
+      "image": [
+        "236",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "238": {
+    "inputs": {
+      "image": [
+        "237",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "239": {
+    "inputs": {
+      "image": [
+        "238",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "240": {
+    "inputs": {
+      "image": [
+        "239",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "241": {
+    "inputs": {
+      "image": [
+        "240",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "242": {
+    "inputs": {
+      "image": [
+        "241",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "243": {
+    "inputs": {
+      "image": [
+        "242",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "244": {
+    "inputs": {
+      "image": [
+        "243",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "245": {
+    "inputs": {
+      "image": [
+        "244",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "246": {
+    "inputs": {
+      "image": [
+        "245",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "247": {
+    "inputs": {
+      "image": [
+        "246",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "248": {
+    "inputs": {
+      "image": [
+        "247",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "249": {
+    "inputs": {
+      "image": [
+        "248",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "250": {
+    "inputs": {
+      "image": [
+        "249",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "251": {
+    "inputs": {
+      "image": [
+        "250",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "252": {
+    "inputs": {
+      "images": [
+        "251",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "PreviewImage"
+    }
+  }
+}

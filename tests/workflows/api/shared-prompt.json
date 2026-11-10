@@ -1,0 +1,194 @@
+{
+  "1": {
+    "inputs": {
+      "text": "A red square on a plain white background, centered and crisp. ",
+      "negative": "",
+      "required": true,
+      "max_chars": 200
+    },
+    "class_type": "UPAIPrompt",
+    "_meta": {
+      "title": "UPAIPrompt"
+    }
+  },
+  "2": {
+    "inputs": {
+      "resolutions": "512,768",
+      "aspect_ratios": "1:1,16:9",
+      "default_resolution": "512",
+      "default_aspect_ratio": "1:1",
+      "align": 16,
+      "size_overrides": "",
+      "duration_min": 1.0,
+      "duration_max": 4.0,
+      "duration_default": 1.0,
+      "duration_step": 0.25,
+      "fps": 8.0,
+      "frame_mod": 4,
+      "frame_add": 1,
+      "count_max": 4,
+      "count_mode": "batch",
+      "test_resolution": "512",
+      "test_aspect_ratio": "1:1",
+      "test_duration": 1.0,
+      "test_count": 1,
+      "test_seed": 0
+    },
+    "class_type": "UPAISettings",
+    "_meta": {
+      "title": "UPAISettings"
+    }
+  },
+  "3": {
+    "inputs": {
+      "id": "shared-a",
+      "name": "Shared A",
+      "description": "",
+      "kind": "image",
+      "enabled": true,
+      "price_per_run_usd": 0.0
+    },
+    "class_type": "UPAIModel",
+    "_meta": {
+      "title": "UPAIModel"
+    }
+  },
+  "4": {
+    "inputs": {
+      "width": [
+        "5",
+        0
+      ],
+      "height": 64,
+      "batch_size": [
+        "2",
+        5
+      ],
+      "color": 0
+    },
+    "class_type": "EmptyImage",
+    "_meta": {
+      "title": "EmptyImage"
+    }
+  },
+  "5": {
+    "inputs": {
+      "string": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "StringLength",
+    "_meta": {
+      "title": "StringLength"
+    }
+  },
+  "6": {
+    "inputs": {
+      "image": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "7": {
+    "inputs": {
+      "format": "png",
+      "crf": 0,
+      "preview": true,
+      "upai_job": "",
+      "images": [
+        "6",
+        0
+      ],
+      "model": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "UPAIOutput",
+    "_meta": {
+      "title": "UPAIOutput"
+    }
+  },
+  "8": {
+    "inputs": {
+      "id": "shared-b",
+      "name": "Shared B",
+      "description": "",
+      "kind": "image",
+      "enabled": true,
+      "price_per_run_usd": 0.0
+    },
+    "class_type": "UPAIModel",
+    "_meta": {
+      "title": "UPAIModel"
+    }
+  },
+  "9": {
+    "inputs": {
+      "width": [
+        "10",
+        0
+      ],
+      "height": 64,
+      "batch_size": [
+        "2",
+        5
+      ],
+      "color": 0
+    },
+    "class_type": "EmptyImage",
+    "_meta": {
+      "title": "EmptyImage"
+    }
+  },
+  "10": {
+    "inputs": {
+      "string": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "StringLength",
+    "_meta": {
+      "title": "StringLength"
+    }
+  },
+  "11": {
+    "inputs": {
+      "image": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "12": {
+    "inputs": {
+      "format": "png",
+      "crf": 0,
+      "preview": true,
+      "upai_job": "",
+      "images": [
+        "11",
+        0
+      ],
+      "model": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "UPAIOutput",
+    "_meta": {
+      "title": "UPAIOutput"
+    }
+  }
+}

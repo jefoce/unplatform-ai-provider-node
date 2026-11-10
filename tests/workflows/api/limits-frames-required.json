@@ -1,0 +1,193 @@
+{
+  "1": {
+    "inputs": {
+      "image_max": 1,
+      "image_required": 1,
+      "video_max": 0,
+      "video_required": 0,
+      "audio_max": 0,
+      "audio_required": 0,
+      "start_frame": "required",
+      "end_frame": "off",
+      "duration_min": 1.0,
+      "duration_max": 2.0,
+      "count_max": 1
+    },
+    "class_type": "UPAILimits",
+    "_meta": {
+      "title": "UPAILimits"
+    }
+  },
+  "2": {
+    "inputs": {
+      "id": "limits-frames",
+      "name": "Limits Frames",
+      "description": "",
+      "kind": "image",
+      "enabled": true,
+      "price_per_run_usd": 0.0,
+      "limits": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "UPAIModel",
+    "_meta": {
+      "title": "UPAIModel"
+    }
+  },
+  "3": {
+    "inputs": {
+      "resolutions": "512,768",
+      "aspect_ratios": "1:1,16:9",
+      "default_resolution": "512",
+      "default_aspect_ratio": "1:1",
+      "align": 16,
+      "size_overrides": "",
+      "duration_min": 1.0,
+      "duration_max": 4.0,
+      "duration_default": 1.0,
+      "duration_step": 0.25,
+      "fps": 8.0,
+      "frame_mod": 4,
+      "frame_add": 1,
+      "count_max": 4,
+      "count_mode": "batch",
+      "test_resolution": "512",
+      "test_aspect_ratio": "1:1",
+      "test_duration": 1.0,
+      "test_count": 1,
+      "test_seed": 0
+    },
+    "class_type": "UPAISettings",
+    "_meta": {
+      "title": "UPAISettings"
+    }
+  },
+  "4": {
+    "inputs": {
+      "width": 64,
+      "height": 64,
+      "batch_size": [
+        "3",
+        5
+      ],
+      "color": 0
+    },
+    "class_type": "EmptyImage",
+    "_meta": {
+      "title": "EmptyImage"
+    }
+  },
+  "5": {
+    "inputs": {
+      "index": 1,
+      "required": true,
+      "image": "upai-frame.png"
+    },
+    "class_type": "UPAIImageRef",
+    "_meta": {
+      "title": "UPAIImageRef"
+    }
+  },
+  "6": {
+    "inputs": {
+      "required": true,
+      "image": "upai-frame.png"
+    },
+    "class_type": "UPAIStartFrame",
+    "_meta": {
+      "title": "UPAIStartFrame"
+    }
+  },
+  "7": {
+    "inputs": {
+      "required": false,
+      "image": "upai-frame.png"
+    },
+    "class_type": "UPAIEndFrame",
+    "_meta": {
+      "title": "UPAIEndFrame"
+    }
+  },
+  "8": {
+    "inputs": {
+      "image1": [
+        "4",
+        0
+      ],
+      "image2": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "ImageBatch",
+    "_meta": {
+      "title": "ImageBatch"
+    }
+  },
+  "9": {
+    "inputs": {
+      "image1": [
+        "8",
+        0
+      ],
+      "image2": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "ImageBatch",
+    "_meta": {
+      "title": "ImageBatch"
+    }
+  },
+  "10": {
+    "inputs": {
+      "image1": [
+        "9",
+        0
+      ],
+      "image2": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "ImageBatch",
+    "_meta": {
+      "title": "ImageBatch"
+    }
+  },
+  "11": {
+    "inputs": {
+      "image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "ImageInvert"
+    }
+  },
+  "12": {
+    "inputs": {
+      "format": "png",
+      "crf": 0,
+      "preview": true,
+      "upai_job": "",
+      "model": [
+        "2",
+        0
+      ],
+      "images": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "UPAIOutput",
+    "_meta": {
+      "title": "UPAIOutput"
+    }
+  }
+}

@@ -1,0 +1,159 @@
+name: release
+
+on:
+  push:
+    branches: [releases]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  checks:
+    uses: ./.github/workflows/checks.yml
+
+  guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      is_release_ref: ${{ steps.ref.outputs.is_release_ref }}
+    steps:
+      - name: Check ref
+        id: ref
+        env:
+          GITHUB_REF: ${{ github.ref }}
+        run: |
+          if [[ "${GITHUB_REF}" == "refs/heads/releases" ]]; then
+            echo "is_release_ref=true" >> "${GITHUB_OUTPUT}"
+          else
+            echo "is_release_ref=false" >> "${GITHUB_OUTPUT}"
+            echo "::notice::Skipping release: ${GITHUB_REF} is not refs/heads/releases."
+          fi
+
+  release:
+    needs: [checks, guard]
+    if: needs.checks.result == 'success' && needs.guard.outputs.is_release_ref == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+
+      - name: Resolve version
+        id: version
+        run: bash .github/scripts/release-version.sh
+
+      - name: Tag
+        if: steps.version.outputs.release == 'true'
+        env:
+          TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          existing="$(git rev-parse -q --verify "refs/tags/${TAG}" || true)"
+          if [[ -n "${existing}" && "${existing}" != "${GITHUB_SHA}" ]]; then
+            echo "::error::Tag ${TAG} exists at ${existing}, not at ${GITHUB_SHA}."
+            exit 1
+          fi
+          if [[ -z "${existing}" ]]; then
+            git tag "${TAG}" "${GITHUB_SHA}"
+          fi
+          git push origin "refs/tags/${TAG}"
+
+      - name: Release
+        if: steps.version.outputs.release == 'true'
+        env:
+          TAG: ${{ steps.version.outputs.tag }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "${TAG}" >/dev/null 2>&1; then
+            echo "Release ${TAG} already exists."
+          else
+            gh release create "${TAG}" --title "${TAG}" --notes-file release-notes.md
+          fi
+
+      - name: Check registry token
+        id: token
+        if: steps.version.outputs.release == 'true'
+        env:
+          REGISTRY_ACCESS_TOKEN: ${{ secrets.REGISTRY_ACCESS_TOKEN }}
+        run: |
+          if [[ -z "${REGISTRY_ACCESS_TOKEN}" ]]; then
+            echo "::error::REGISTRY_ACCESS_TOKEN is missing. Tag and GitHub release exist; add the secret and re-run this workflow to publish."
+            exit 1
+          fi
+          echo "present=true" >> "${GITHUB_OUTPUT}"
+
+      - name: Check registry version
+        id: registry
+        if: steps.version.outputs.release == 'true' && steps.token.outputs.present == 'true'
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          url="https://api.comfy.org/nodes/unplatform-ai-provider-node/versions"
+          body="$(mktemp)"
+          status=""
+          for attempt in 1 2 3; do
+            status="$(curl -sS -o "${body}" -w '%{http_code}' "${url}" || true)"
+            if [[ "${status}" == "200" || "${status}" == "404" ]]; then
+              break
+            fi
+            if [[ "${attempt}" -lt 3 ]]; then
+              sleep 5
+            fi
+          done
+          if [[ "${status}" == "404" ]]; then
+            echo "already_published=false" >> "${GITHUB_OUTPUT}"
+            exit 0
+          fi
+          if [[ "${status}" != "200" ]]; then
+            echo "::error::Registry versions request failed with status ${status}."
+            exit 1
+          fi
+          published="$(python3 - "${body}" "${VERSION}" <<'PY'
+          import json
+          import sys
+
+          path, version = sys.argv[1], sys.argv[2]
+          try:
+              with open(path, encoding="utf-8") as handle:
+                  data = json.load(handle)
+          except (OSError, json.JSONDecodeError):
+              print("invalid")
+              raise SystemExit(0)
+
+          if isinstance(data, list):
+              items = data
+          elif isinstance(data, dict) and isinstance(data.get("versions"), list):
+              items = data["versions"]
+          else:
+              items = []
+          found = any(isinstance(item, dict) and item.get("version") == version for item in items)
+          print("true" if found else "false")
+          PY
+          )"
+          case "${published}" in
+            true)
+              echo "already_published=true" >> "${GITHUB_OUTPUT}"
+              echo "Version ${VERSION} is already published."
+              ;;
+            false)
+              echo "already_published=false" >> "${GITHUB_OUTPUT}"
+              ;;
+            *)
+              echo "::error::Failed to parse the registry versions response."
+              exit 1
+              ;;
+          esac
+
+      - name: Publish to Comfy Registry
+        if: steps.version.outputs.release == 'true' && steps.token.outputs.present == 'true' && steps.registry.outputs.already_published != 'true'
+        uses: Comfy-Org/publish-node-action@7578cdb0c1410f2515e6f9b1443c6859cab94f05 # 1.0.1
+        with:
+          personal_access_token: ${{ secrets.REGISTRY_ACCESS_TOKEN }}

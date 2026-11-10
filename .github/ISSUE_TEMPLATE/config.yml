@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and setup help
+    url: https://github.com/jefoce/unplatform-ai-provider-node/discussions
+    about: Ask setup questions and talk to other users in Discussions.

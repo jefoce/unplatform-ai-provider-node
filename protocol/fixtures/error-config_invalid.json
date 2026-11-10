@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": "config_invalid",
+    "message": "config is invalid",
+    "details": {}
+  }
+}

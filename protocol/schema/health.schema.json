@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:upai:1:health",
+  "title": "upai/1 health",
+  "type": "object",
+  "required": [
+    "protocol",
+    "server",
+    "server_version",
+    "implementation",
+    "implementation_version",
+    "auth_required",
+    "lan_allowed",
+    "max_upload_bytes",
+    "upload_quota_bytes",
+    "instance_id",
+    "max_running",
+    "max_pending",
+    "max_inline_bytes",
+    "disk_free_bytes",
+    "result_delete"
+  ],
+  "properties": {
+    "protocol": {
+      "const": 1
+    },
+    "server": {
+      "type": "string"
+    },
+    "server_version": {
+      "type": "string"
+    },
+    "implementation": {
+      "type": "string"
+    },
+    "implementation_version": {
+      "type": "string"
+    },
+    "auth_required": {
+      "type": "boolean"
+    },
+    "lan_allowed": {
+      "type": "boolean"
+    },
+    "max_upload_bytes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "upload_quota_bytes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "instance_id": {
+      "type": "string",
+      "pattern": "^(?:[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12})?$"
+    },
+    "max_running": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 8
+    },
+    "max_pending": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "max_inline_bytes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "disk_free_bytes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "result_delete": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}

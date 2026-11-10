@@ -1,0 +1,7 @@
+{
+  "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+  "ref": "upai-upload:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+  "size": 1024,
+  "content_type": "image/png",
+  "filename": "frame.png"
+}

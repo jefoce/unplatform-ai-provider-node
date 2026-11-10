@@ -1,0 +1,9 @@
+{
+  "error": {
+    "code": "too_large",
+    "message": "upload exceeds 104857600 bytes",
+    "details": {
+      "field": "file"
+    }
+  }
+}

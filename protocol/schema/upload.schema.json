@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:upai:1:upload",
+  "title": "upai/1 upload",
+  "type": "object",
+  "required": [
+    "sha256",
+    "ref",
+    "size",
+    "content_type",
+    "filename"
+  ],
+  "properties": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "ref": {
+      "type": "string",
+      "pattern": "^upai-upload:[0-9a-f]{64}$"
+    },
+    "size": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "content_type": {
+      "type": "string"
+    },
+    "filename": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

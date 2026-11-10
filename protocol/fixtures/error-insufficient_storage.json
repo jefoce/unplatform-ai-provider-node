@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": "insufficient_storage",
+    "message": "not enough free disk space",
+    "details": {}
+  }
+}

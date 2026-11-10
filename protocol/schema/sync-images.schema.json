@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:upai:1:sync-images",
+  "title": "upai/1 synchronous image result",
+  "type": "object",
+  "required": [
+    "data",
+    "usage"
+  ],
+  "properties": {
+    "data": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/image"
+      }
+    },
+    "usage": {
+      "type": "object",
+      "required": [
+        "cost"
+      ],
+      "properties": {
+        "cost": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "image": {
+      "type": "object",
+      "required": [
+        "b64_json",
+        "media_type"
+      ],
+      "properties": {
+        "b64_json": {
+          "type": "string"
+        },
+        "media_type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

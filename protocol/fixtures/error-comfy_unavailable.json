@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": "comfy_unavailable",
+    "message": "backend is unavailable",
+    "details": {}
+  }
+}

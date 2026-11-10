@@ -1,0 +1,11398 @@
+{
+  "id": "00000000-0000-4000-8000-0000000000c0",
+  "revision": 0,
+  "last_node_id": 256,
+  "last_link_id": 255,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "UPAIModel",
+      "pos": [
+        0,
+        0
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "limits",
+          "type": "UPAI_LIMITS",
+          "link": null
+        },
+        {
+          "name": "id",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "id"
+          }
+        },
+        {
+          "name": "name",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "name"
+          }
+        },
+        {
+          "name": "description",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "description"
+          }
+        },
+        {
+          "name": "kind",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "kind"
+          }
+        },
+        {
+          "name": "enabled",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "enabled"
+          }
+        },
+        {
+          "name": "price_per_run_usd",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "price_per_run_usd"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "UPAI_MODEL",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UPAIModel"
+      },
+      "widgets_values": [
+        "slow",
+        "Slow Cancel",
+        "",
+        "image",
+        true,
+        0.0
+      ]
+    },
+    {
+      "id": 2,
+      "type": "UPAIPrompt",
+      "pos": [
+        260,
+        0
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "text"
+          }
+        },
+        {
+          "name": "negative",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "negative"
+          }
+        },
+        {
+          "name": "required",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "required"
+          }
+        },
+        {
+          "name": "max_chars",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "max_chars"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "links": [
+            2
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UPAIPrompt"
+      },
+      "widgets_values": [
+        "A slow cancel test image.",
+        "",
+        true,
+        200
+      ]
+    },
+    {
+      "id": 3,
+      "type": "UPAISettings",
+      "pos": [
+        520,
+        0
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "resolutions",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "resolutions"
+          }
+        },
+        {
+          "name": "aspect_ratios",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "aspect_ratios"
+          }
+        },
+        {
+          "name": "default_resolution",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "default_resolution"
+          }
+        },
+        {
+          "name": "default_aspect_ratio",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "default_aspect_ratio"
+          }
+        },
+        {
+          "name": "align",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "align"
+          }
+        },
+        {
+          "name": "size_overrides",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "size_overrides"
+          }
+        },
+        {
+          "name": "duration_min",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "duration_min"
+          }
+        },
+        {
+          "name": "duration_max",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "duration_max"
+          }
+        },
+        {
+          "name": "duration_default",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "duration_default"
+          }
+        },
+        {
+          "name": "duration_step",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "duration_step"
+          }
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "fps"
+          }
+        },
+        {
+          "name": "frame_mod",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "frame_mod"
+          }
+        },
+        {
+          "name": "frame_add",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "frame_add"
+          }
+        },
+        {
+          "name": "count_max",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "count_max"
+          }
+        },
+        {
+          "name": "count_mode",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "count_mode"
+          }
+        },
+        {
+          "name": "test_resolution",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "test_resolution"
+          }
+        },
+        {
+          "name": "test_aspect_ratio",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "test_aspect_ratio"
+          }
+        },
+        {
+          "name": "test_duration",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "test_duration"
+          }
+        },
+        {
+          "name": "test_count",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "test_count"
+          }
+        },
+        {
+          "name": "test_seed",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "test_seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "frames",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "links": []
+        },
+        {
+          "name": "duration",
+          "type": "FLOAT",
+          "links": []
+        },
+        {
+          "name": "count",
+          "type": "INT",
+          "links": [
+            4
+          ]
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UPAISettings"
+      },
+      "widgets_values": [
+        "512",
+        "1:1",
+        "512",
+        "1:1",
+        16,
+        "",
+        1.0,
+        4.0,
+        1.0,
+        0.25,
+        8.0,
+        4,
+        1,
+        1,
+        "batch",
+        "512",
+        "1:1",
+        1.0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": 4,
+      "type": "EmptyImage",
+      "pos": [
+        780,
+        0
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "height"
+          }
+        },
+        {
+          "name": "batch_size",
+          "type": "INT",
+          "link": 4,
+          "widget": {
+            "name": "batch_size"
+          }
+        },
+        {
+          "name": "color",
+          "type": "INT",
+          "link": 3,
+          "widget": {
+            "name": "color"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyImage"
+      },
+      "widgets_values": [
+        4096,
+        4096,
+        1,
+        0
+      ]
+    },
+    {
+      "id": 5,
+      "type": "StringLength",
+      "pos": [
+        0,
+        180
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string",
+          "type": "STRING",
+          "link": 2,
+          "widget": {
+            "name": "string"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "length",
+          "type": "INT",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringLength"
+      },
+      "widgets_values": [
+        "A slow cancel test image."
+      ]
+    },
+    {
+      "id": 6,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        180
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 7,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        180
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 8,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        180
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 9,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        180
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 10,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        180
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 11,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        180
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 12,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        180
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 13,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        180
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 14,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        180
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 15,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        180
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            15
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 16,
+      "type": "ImageInvert",
+      "pos": [
+        2660,
+        180
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 17,
+      "type": "ImageInvert",
+      "pos": [
+        2900,
+        180
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 18,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        360
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 17
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 19,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        360
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            19
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 20,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        360
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            20
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 21,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        360
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            21
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 22,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        360
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 21
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            22
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 23,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        360
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            23
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 24,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        360
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 23
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            24
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 25,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        360
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 26,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        360
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            26
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 27,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        360
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            27
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 28,
+      "type": "ImageInvert",
+      "pos": [
+        2660,
+        360
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            28
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 29,
+      "type": "ImageInvert",
+      "pos": [
+        2900,
+        360
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 28
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            29
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 30,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        540
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            30
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 31,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        540
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 30
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            31
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 32,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        540
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 31
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            32
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 33,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        540
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 32
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            33
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 34,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        540
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 33
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            34
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 35,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        540
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 34
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            35
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 36,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        540
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 35
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            36
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 37,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        540
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 36
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            37
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 38,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        540
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 37
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            38
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 39,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        540
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 38
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            39
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 40,
+      "type": "ImageInvert",
+      "pos": [
+        2660,
+        540
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 39
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            40
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 41,
+      "type": "ImageInvert",
+      "pos": [
+        2900,
+        540
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 40
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            41
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 42,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        720
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 41
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            42
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 43,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        720
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 42
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            43
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 44,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        720
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 43
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            44
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 45,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        720
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 44
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            45
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 46,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        720
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 45
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            46
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 47,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        720
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 46
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            47
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 48,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        720
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 47
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            48
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 49,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        720
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 48
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            49
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 50,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        720
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 49
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            50
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 51,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        720
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 50
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            51
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 52,
+      "type": "ImageInvert",
+      "pos": [
+        2660,
+        720
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 51
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            52
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 53,
+      "type": "ImageInvert",
+      "pos": [
+        2900,
+        720
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 52
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            53
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 54,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        900
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 53,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 53
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            54
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 55,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        900
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 54,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 54
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            55
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 56,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        900
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 55,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 55
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            56
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 57,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        900
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 56,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 56
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            57
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 58,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        900
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 57,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 57
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            58
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 59,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        900
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 58,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 58
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            59
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 60,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        900
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 59,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 59
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            60
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 61,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        900
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 60,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 60
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            61
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 62,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        900
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 61,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 61
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            62
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 63,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        900
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 62,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 62
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            63
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 64,
+      "type": "ImageInvert",
+      "pos": [
+        2660,
+        900
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 63,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 63
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            64
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 65,
+      "type": "ImageInvert",
+      "pos": [
+        2900,
+        900
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 64,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 64
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            65
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 66,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        1080
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 65,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 65
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            66
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 67,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        1080
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 66,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 66
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            67
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 68,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        1080
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 67,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 67
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            68
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 69,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        1080
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 68,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 68
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            69
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 70,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        1080
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 69,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 69
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            70
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 71,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        1080
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 70,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 70
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            71
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 72,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        1080
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 71,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 71
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            72
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 73,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        1080
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 72,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 72
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            73
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 74,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        1080
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 73,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 73
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            74
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 75,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        1080
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 74,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 74
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            75
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 76,
+      "type": "ImageInvert",
+      "pos": [
+        2660,
+        1080
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 75,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 75
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            76
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 77,
+      "type": "ImageInvert",
+      "pos": [
+        2900,
+        1080
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 76,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 76
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            77
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 78,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        1260
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 77,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 77
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            78
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 79,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        1260
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 78,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 78
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            79
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 80,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        1260
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 79,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 79
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            80
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 81,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        1260
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 80,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 80
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            81
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 82,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        1260
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 81,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 81
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            82
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 83,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        1260
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 82,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 82
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            83
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 84,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        1260
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 83,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 83
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            84
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 85,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        1260
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 84,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 84
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            85
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 86,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        1260
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 85,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 85
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            86
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 87,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        1260
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 86,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 86
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            87
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 88,
+      "type": "ImageInvert",
+      "pos": [
+        2660,
+        1260
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 87,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 87
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            88
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 89,
+      "type": "ImageInvert",
+      "pos": [
+        2900,
+        1260
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 88,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 88
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            89
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 90,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        1440
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 89,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 89
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            90
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 91,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        1440
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 90,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 90
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            91
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 92,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        1440
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 91,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 91
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            92
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 93,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        1440
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 92,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 92
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            93
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 94,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        1440
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 93,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 93
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            94
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 95,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        1440
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 94,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 94
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            95
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 96,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        1440
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 95,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 95
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            96
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 97,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        1440
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 96,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 96
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            97
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 98,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        1440
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 97,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 97
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            98
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 99,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        1440
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 98,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 98
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            99
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 100,
+      "type": "ImageInvert",
+      "pos": [
+        2660,
+        1440
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 99,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 99
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            100
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 101,
+      "type": "ImageInvert",
+      "pos": [
+        2900,
+        1440
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 100,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 100
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            101
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 102,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        1620
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 101,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 101
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            102
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 103,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        1620
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 102,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 102
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            103
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 104,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        1620
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 103,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 103
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            104
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 105,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        1620
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 104,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 104
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            105
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 106,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        1620
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 105,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 105
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            106
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 107,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        1620
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 106,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 106
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            107
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 108,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        1620
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 107,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 107
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            108
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 109,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        1620
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 108,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 108
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            109
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 110,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        1620
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 109,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 109
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            110
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 111,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        1620
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 110,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 110
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            111
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 112,
+      "type": "ImageInvert",
+      "pos": [
+        2660,
+        1620
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 111,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 111
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            112
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 113,
+      "type": "ImageInvert",
+      "pos": [
+        2900,
+        1620
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 112,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 112
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            113
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 114,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        1800
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 113,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 113
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            114
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 115,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        1800
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 114,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 114
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            115
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 116,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        1800
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 115,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 115
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            116
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 117,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        1800
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 116,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 116
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            117
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 118,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        1800
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 117,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 117
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            118
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 119,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        1800
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 118,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 118
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            119
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 120,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        1800
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 119,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 119
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            120
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 121,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        1800
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 120,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 120
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            121
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 122,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        1800
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 121,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 121
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            122
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 123,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        1800
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 122,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 122
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            123
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 124,
+      "type": "ImageInvert",
+      "pos": [
+        2660,
+        1800
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 123,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 123
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            124
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 125,
+      "type": "ImageInvert",
+      "pos": [
+        2900,
+        1800
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 124,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 124
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            125
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 126,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        1980
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 125,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 125
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            126
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 127,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        1980
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 126,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 126
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            127
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 128,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        1980
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 127,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 127
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            128
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 129,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        1980
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 128,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 128
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            129
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 130,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        1980
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 129,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 129
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            130
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 131,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        1980
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 130,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 130
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            131
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 132,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        1980
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 131,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 131
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            132
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 133,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        1980
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 132,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 132
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            133
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 134,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        1980
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 133,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 133
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            134
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 135,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        1980
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 134,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 134
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            135
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 136,
+      "type": "ImageInvert",
+      "pos": [
+        2660,
+        1980
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 135,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 135
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            136
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 137,
+      "type": "ImageInvert",
+      "pos": [
+        2900,
+        1980
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 136,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 136
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            137
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 138,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        2160
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 137,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 137
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            138
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 139,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        2160
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 138,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 138
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            139
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 140,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        2160
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 139,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 139
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            140
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 141,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        2160
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 140,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 140
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            141
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 142,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        2160
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 141,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 141
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            142
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 143,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        2160
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 142,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 142
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            143
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 144,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        2160
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 143,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 143
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            144
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 145,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        2160
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 144,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 144
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            145
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 146,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        2160
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 145,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 145
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            146
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 147,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        2160
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 146,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 146
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            147
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 148,
+      "type": "ImageInvert",
+      "pos": [
+        2660,
+        2160
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 147,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 147
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            148
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 149,
+      "type": "ImageInvert",
+      "pos": [
+        2900,
+        2160
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 148,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 148
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            149
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 150,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        2340
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 149,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 149
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            150
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 151,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        2340
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 150,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 150
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            151
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 152,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        2340
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 151,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 151
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            152
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 153,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        2340
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 152,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 152
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            153
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 154,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        2340
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 153,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 153
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            154
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 155,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        2340
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 154,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 154
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            155
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 156,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        2340
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 155,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 155
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            156
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 157,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        2340
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 156,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 156
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            157
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 158,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        2340
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 157,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 157
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            158
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 159,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        2340
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 158,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 158
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            159
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 160,
+      "type": "ImageInvert",
+      "pos": [
+        2660,
+        2340
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 159,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 159
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            160
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 161,
+      "type": "ImageInvert",
+      "pos": [
+        2900,
+        2340
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 160,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 160
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            161
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 162,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        2520
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 161,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 161
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            162
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 163,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        2520
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 162,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 162
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            163
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 164,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        2520
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 163,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 163
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            164
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 165,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        2520
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 164,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 164
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            165
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 166,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        2520
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 165,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 165
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            166
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 167,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        2520
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 166,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 166
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            167
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 168,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        2520
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 167,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 167
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            168
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 169,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        2520
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 168,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 168
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            169
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 170,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        2520
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 169,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 169
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            170
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 171,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        2520
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 170,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 170
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            171
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 172,
+      "type": "ImageInvert",
+      "pos": [
+        2660,
+        2520
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 171,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 171
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            172
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 173,
+      "type": "ImageInvert",
+      "pos": [
+        2900,
+        2520
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 172,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 172
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            173
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 174,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        2700
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 173,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 173
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            174
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 175,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        2700
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 174,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 174
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            175
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 176,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        2700
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 175,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 175
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            176
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 177,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        2700
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 176,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 176
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            177
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 178,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        2700
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 177,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 177
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            178
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 179,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        2700
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 178,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 178
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            179
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 180,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        2700
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 179,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 179
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            180
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 181,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        2700
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 180,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 180
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            181
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 182,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        2700
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 181,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 181
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            182
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 183,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        2700
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 182,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 182
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            183
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 184,
+      "type": "ImageInvert",
+      "pos": [
+        2660,
+        2700
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 183,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 183
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            184
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 185,
+      "type": "ImageInvert",
+      "pos": [
+        2900,
+        2700
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 184,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 184
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            185
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 186,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        2880
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 185,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 185
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            186
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 187,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        2880
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 186,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 186
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            187
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 188,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        2880
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 187,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 187
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            188
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 189,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        2880
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 188,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 188
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            189
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 190,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        2880
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 189,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 189
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            190
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 191,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        2880
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 190,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 190
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            191
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 192,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        2880
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 191,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 191
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            192
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 193,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        2880
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 192,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 192
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            193
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 194,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        2880
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 193,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 193
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            194
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 195,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        2880
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 194,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 194
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            195
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 196,
+      "type": "ImageInvert",
+      "pos": [
+        2660,
+        2880
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 195,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 195
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            196
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 197,
+      "type": "ImageInvert",
+      "pos": [
+        2900,
+        2880
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 196,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 196
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            197
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 198,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        3060
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 197,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 197
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            198
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 199,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        3060
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 198,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 198
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            199
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 200,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        3060
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 199,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 199
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            200
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 201,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        3060
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 200,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 200
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            201
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 202,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        3060
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 201,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 201
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            202
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 203,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        3060
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 202,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 202
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            203
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 204,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        3060
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 203,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 203
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            204
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 205,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        3060
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 204,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 204
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            205
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 206,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        3060
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 205,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 205
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            206
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 207,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        3060
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 206,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 206
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            207
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 208,
+      "type": "ImageInvert",
+      "pos": [
+        2660,
+        3060
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 207,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 207
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            208
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 209,
+      "type": "ImageInvert",
+      "pos": [
+        2900,
+        3060
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 208,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 208
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            209
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 210,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        3240
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 209,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 209
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            210
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 211,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        3240
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 210,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 210
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            211
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 212,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        3240
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 211,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 211
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            212
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 213,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        3240
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 212,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 212
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            213
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 214,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        3240
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 213,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 213
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            214
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 215,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        3240
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 214,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 214
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            215
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 216,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        3240
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 215,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 215
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            216
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 217,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        3240
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 216,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 216
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            217
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 218,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        3240
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 217,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 217
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            218
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 219,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        3240
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 218,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 218
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            219
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 220,
+      "type": "ImageInvert",
+      "pos": [
+        2660,
+        3240
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 219,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 219
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            220
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 221,
+      "type": "ImageInvert",
+      "pos": [
+        2900,
+        3240
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 220,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 220
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            221
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 222,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        3420
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 221,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 221
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            222
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 223,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        3420
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 222,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 222
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            223
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 224,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        3420
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 223,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 223
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            224
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 225,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        3420
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 224,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 224
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            225
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 226,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        3420
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 225,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 225
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            226
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 227,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        3420
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 226,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 226
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            227
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 228,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        3420
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 227,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 227
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            228
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 229,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        3420
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 228,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 228
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            229
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 230,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        3420
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 229,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 229
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            230
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 231,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        3420
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 230,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 230
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            231
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 232,
+      "type": "ImageInvert",
+      "pos": [
+        2660,
+        3420
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 231,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 231
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            232
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 233,
+      "type": "ImageInvert",
+      "pos": [
+        2900,
+        3420
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 232,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 232
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            233
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 234,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        3600
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 233,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 233
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            234
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 235,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        3600
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 234,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 234
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            235
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 236,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        3600
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 235,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 235
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            236
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 237,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        3600
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 236,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 236
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            237
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 238,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        3600
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 237,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 237
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            238
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 239,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        3600
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 238,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 238
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            239
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 240,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        3600
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 239,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 239
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            240
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 241,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        3600
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 240,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 240
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            241
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 242,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        3600
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 241,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 241
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            242
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 243,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        3600
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 242,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 242
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            243
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 244,
+      "type": "ImageInvert",
+      "pos": [
+        2660,
+        3600
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 243,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 243
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            244
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 245,
+      "type": "ImageInvert",
+      "pos": [
+        2900,
+        3600
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 244,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 244
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            245
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 246,
+      "type": "ImageInvert",
+      "pos": [
+        260,
+        3780
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 245,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 245
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            246
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 247,
+      "type": "ImageInvert",
+      "pos": [
+        500,
+        3780
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 246,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 246
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            247
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 248,
+      "type": "ImageInvert",
+      "pos": [
+        740,
+        3780
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 247,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 247
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            248
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 249,
+      "type": "ImageInvert",
+      "pos": [
+        980,
+        3780
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 248,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 248
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            249
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 250,
+      "type": "ImageInvert",
+      "pos": [
+        1220,
+        3780
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 249,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 249
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            250
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 251,
+      "type": "ImageInvert",
+      "pos": [
+        1460,
+        3780
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 250,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 250
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            251
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 252,
+      "type": "ImageInvert",
+      "pos": [
+        1700,
+        3780
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 251,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 251
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            252
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 253,
+      "type": "ImageInvert",
+      "pos": [
+        1940,
+        3780
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 252,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 252
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            253
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 254,
+      "type": "ImageInvert",
+      "pos": [
+        2180,
+        3780
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 253,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 253
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            254
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 255,
+      "type": "ImageInvert",
+      "pos": [
+        2420,
+        3780
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 254,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 254
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            255
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 256,
+      "type": "UPAIOutput",
+      "pos": [
+        500,
+        180
+      ],
+      "size": [
+        220,
+        140
+      ],
+      "flags": {},
+      "order": 255,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "UPAI_MODEL",
+          "link": 1
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 255
+        },
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "link": null
+        },
+        {
+          "name": "format",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "format"
+          }
+        },
+        {
+          "name": "crf",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "crf"
+          }
+        },
+        {
+          "name": "preview",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "preview"
+          }
+        },
+        {
+          "name": "upai_job",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "upai_job"
+          }
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "UPAIOutput"
+      },
+      "widgets_values": [
+        "png",
+        0,
+        true,
+        ""
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      256,
+      0,
+      "UPAI_MODEL"
+    ],
+    [
+      2,
+      2,
+      0,
+      5,
+      0,
+      "STRING"
+    ],
+    [
+      3,
+      5,
+      0,
+      4,
+      3,
+      "INT"
+    ],
+    [
+      4,
+      3,
+      5,
+      4,
+      2,
+      "INT"
+    ],
+    [
+      5,
+      4,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      6,
+      6,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      7,
+      7,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      8,
+      8,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      9,
+      9,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      10,
+      10,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      11,
+      11,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      12,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      13,
+      13,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      14,
+      14,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ],
+    [
+      15,
+      15,
+      0,
+      16,
+      0,
+      "IMAGE"
+    ],
+    [
+      16,
+      16,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ],
+    [
+      17,
+      17,
+      0,
+      18,
+      0,
+      "IMAGE"
+    ],
+    [
+      18,
+      18,
+      0,
+      19,
+      0,
+      "IMAGE"
+    ],
+    [
+      19,
+      19,
+      0,
+      20,
+      0,
+      "IMAGE"
+    ],
+    [
+      20,
+      20,
+      0,
+      21,
+      0,
+      "IMAGE"
+    ],
+    [
+      21,
+      21,
+      0,
+      22,
+      0,
+      "IMAGE"
+    ],
+    [
+      22,
+      22,
+      0,
+      23,
+      0,
+      "IMAGE"
+    ],
+    [
+      23,
+      23,
+      0,
+      24,
+      0,
+      "IMAGE"
+    ],
+    [
+      24,
+      24,
+      0,
+      25,
+      0,
+      "IMAGE"
+    ],
+    [
+      25,
+      25,
+      0,
+      26,
+      0,
+      "IMAGE"
+    ],
+    [
+      26,
+      26,
+      0,
+      27,
+      0,
+      "IMAGE"
+    ],
+    [
+      27,
+      27,
+      0,
+      28,
+      0,
+      "IMAGE"
+    ],
+    [
+      28,
+      28,
+      0,
+      29,
+      0,
+      "IMAGE"
+    ],
+    [
+      29,
+      29,
+      0,
+      30,
+      0,
+      "IMAGE"
+    ],
+    [
+      30,
+      30,
+      0,
+      31,
+      0,
+      "IMAGE"
+    ],
+    [
+      31,
+      31,
+      0,
+      32,
+      0,
+      "IMAGE"
+    ],
+    [
+      32,
+      32,
+      0,
+      33,
+      0,
+      "IMAGE"
+    ],
+    [
+      33,
+      33,
+      0,
+      34,
+      0,
+      "IMAGE"
+    ],
+    [
+      34,
+      34,
+      0,
+      35,
+      0,
+      "IMAGE"
+    ],
+    [
+      35,
+      35,
+      0,
+      36,
+      0,
+      "IMAGE"
+    ],
+    [
+      36,
+      36,
+      0,
+      37,
+      0,
+      "IMAGE"
+    ],
+    [
+      37,
+      37,
+      0,
+      38,
+      0,
+      "IMAGE"
+    ],
+    [
+      38,
+      38,
+      0,
+      39,
+      0,
+      "IMAGE"
+    ],
+    [
+      39,
+      39,
+      0,
+      40,
+      0,
+      "IMAGE"
+    ],
+    [
+      40,
+      40,
+      0,
+      41,
+      0,
+      "IMAGE"
+    ],
+    [
+      41,
+      41,
+      0,
+      42,
+      0,
+      "IMAGE"
+    ],
+    [
+      42,
+      42,
+      0,
+      43,
+      0,
+      "IMAGE"
+    ],
+    [
+      43,
+      43,
+      0,
+      44,
+      0,
+      "IMAGE"
+    ],
+    [
+      44,
+      44,
+      0,
+      45,
+      0,
+      "IMAGE"
+    ],
+    [
+      45,
+      45,
+      0,
+      46,
+      0,
+      "IMAGE"
+    ],
+    [
+      46,
+      46,
+      0,
+      47,
+      0,
+      "IMAGE"
+    ],
+    [
+      47,
+      47,
+      0,
+      48,
+      0,
+      "IMAGE"
+    ],
+    [
+      48,
+      48,
+      0,
+      49,
+      0,
+      "IMAGE"
+    ],
+    [
+      49,
+      49,
+      0,
+      50,
+      0,
+      "IMAGE"
+    ],
+    [
+      50,
+      50,
+      0,
+      51,
+      0,
+      "IMAGE"
+    ],
+    [
+      51,
+      51,
+      0,
+      52,
+      0,
+      "IMAGE"
+    ],
+    [
+      52,
+      52,
+      0,
+      53,
+      0,
+      "IMAGE"
+    ],
+    [
+      53,
+      53,
+      0,
+      54,
+      0,
+      "IMAGE"
+    ],
+    [
+      54,
+      54,
+      0,
+      55,
+      0,
+      "IMAGE"
+    ],
+    [
+      55,
+      55,
+      0,
+      56,
+      0,
+      "IMAGE"
+    ],
+    [
+      56,
+      56,
+      0,
+      57,
+      0,
+      "IMAGE"
+    ],
+    [
+      57,
+      57,
+      0,
+      58,
+      0,
+      "IMAGE"
+    ],
+    [
+      58,
+      58,
+      0,
+      59,
+      0,
+      "IMAGE"
+    ],
+    [
+      59,
+      59,
+      0,
+      60,
+      0,
+      "IMAGE"
+    ],
+    [
+      60,
+      60,
+      0,
+      61,
+      0,
+      "IMAGE"
+    ],
+    [
+      61,
+      61,
+      0,
+      62,
+      0,
+      "IMAGE"
+    ],
+    [
+      62,
+      62,
+      0,
+      63,
+      0,
+      "IMAGE"
+    ],
+    [
+      63,
+      63,
+      0,
+      64,
+      0,
+      "IMAGE"
+    ],
+    [
+      64,
+      64,
+      0,
+      65,
+      0,
+      "IMAGE"
+    ],
+    [
+      65,
+      65,
+      0,
+      66,
+      0,
+      "IMAGE"
+    ],
+    [
+      66,
+      66,
+      0,
+      67,
+      0,
+      "IMAGE"
+    ],
+    [
+      67,
+      67,
+      0,
+      68,
+      0,
+      "IMAGE"
+    ],
+    [
+      68,
+      68,
+      0,
+      69,
+      0,
+      "IMAGE"
+    ],
+    [
+      69,
+      69,
+      0,
+      70,
+      0,
+      "IMAGE"
+    ],
+    [
+      70,
+      70,
+      0,
+      71,
+      0,
+      "IMAGE"
+    ],
+    [
+      71,
+      71,
+      0,
+      72,
+      0,
+      "IMAGE"
+    ],
+    [
+      72,
+      72,
+      0,
+      73,
+      0,
+      "IMAGE"
+    ],
+    [
+      73,
+      73,
+      0,
+      74,
+      0,
+      "IMAGE"
+    ],
+    [
+      74,
+      74,
+      0,
+      75,
+      0,
+      "IMAGE"
+    ],
+    [
+      75,
+      75,
+      0,
+      76,
+      0,
+      "IMAGE"
+    ],
+    [
+      76,
+      76,
+      0,
+      77,
+      0,
+      "IMAGE"
+    ],
+    [
+      77,
+      77,
+      0,
+      78,
+      0,
+      "IMAGE"
+    ],
+    [
+      78,
+      78,
+      0,
+      79,
+      0,
+      "IMAGE"
+    ],
+    [
+      79,
+      79,
+      0,
+      80,
+      0,
+      "IMAGE"
+    ],
+    [
+      80,
+      80,
+      0,
+      81,
+      0,
+      "IMAGE"
+    ],
+    [
+      81,
+      81,
+      0,
+      82,
+      0,
+      "IMAGE"
+    ],
+    [
+      82,
+      82,
+      0,
+      83,
+      0,
+      "IMAGE"
+    ],
+    [
+      83,
+      83,
+      0,
+      84,
+      0,
+      "IMAGE"
+    ],
+    [
+      84,
+      84,
+      0,
+      85,
+      0,
+      "IMAGE"
+    ],
+    [
+      85,
+      85,
+      0,
+      86,
+      0,
+      "IMAGE"
+    ],
+    [
+      86,
+      86,
+      0,
+      87,
+      0,
+      "IMAGE"
+    ],
+    [
+      87,
+      87,
+      0,
+      88,
+      0,
+      "IMAGE"
+    ],
+    [
+      88,
+      88,
+      0,
+      89,
+      0,
+      "IMAGE"
+    ],
+    [
+      89,
+      89,
+      0,
+      90,
+      0,
+      "IMAGE"
+    ],
+    [
+      90,
+      90,
+      0,
+      91,
+      0,
+      "IMAGE"
+    ],
+    [
+      91,
+      91,
+      0,
+      92,
+      0,
+      "IMAGE"
+    ],
+    [
+      92,
+      92,
+      0,
+      93,
+      0,
+      "IMAGE"
+    ],
+    [
+      93,
+      93,
+      0,
+      94,
+      0,
+      "IMAGE"
+    ],
+    [
+      94,
+      94,
+      0,
+      95,
+      0,
+      "IMAGE"
+    ],
+    [
+      95,
+      95,
+      0,
+      96,
+      0,
+      "IMAGE"
+    ],
+    [
+      96,
+      96,
+      0,
+      97,
+      0,
+      "IMAGE"
+    ],
+    [
+      97,
+      97,
+      0,
+      98,
+      0,
+      "IMAGE"
+    ],
+    [
+      98,
+      98,
+      0,
+      99,
+      0,
+      "IMAGE"
+    ],
+    [
+      99,
+      99,
+      0,
+      100,
+      0,
+      "IMAGE"
+    ],
+    [
+      100,
+      100,
+      0,
+      101,
+      0,
+      "IMAGE"
+    ],
+    [
+      101,
+      101,
+      0,
+      102,
+      0,
+      "IMAGE"
+    ],
+    [
+      102,
+      102,
+      0,
+      103,
+      0,
+      "IMAGE"
+    ],
+    [
+      103,
+      103,
+      0,
+      104,
+      0,
+      "IMAGE"
+    ],
+    [
+      104,
+      104,
+      0,
+      105,
+      0,
+      "IMAGE"
+    ],
+    [
+      105,
+      105,
+      0,
+      106,
+      0,
+      "IMAGE"
+    ],
+    [
+      106,
+      106,
+      0,
+      107,
+      0,
+      "IMAGE"
+    ],
+    [
+      107,
+      107,
+      0,
+      108,
+      0,
+      "IMAGE"
+    ],
+    [
+      108,
+      108,
+      0,
+      109,
+      0,
+      "IMAGE"
+    ],
+    [
+      109,
+      109,
+      0,
+      110,
+      0,
+      "IMAGE"
+    ],
+    [
+      110,
+      110,
+      0,
+      111,
+      0,
+      "IMAGE"
+    ],
+    [
+      111,
+      111,
+      0,
+      112,
+      0,
+      "IMAGE"
+    ],
+    [
+      112,
+      112,
+      0,
+      113,
+      0,
+      "IMAGE"
+    ],
+    [
+      113,
+      113,
+      0,
+      114,
+      0,
+      "IMAGE"
+    ],
+    [
+      114,
+      114,
+      0,
+      115,
+      0,
+      "IMAGE"
+    ],
+    [
+      115,
+      115,
+      0,
+      116,
+      0,
+      "IMAGE"
+    ],
+    [
+      116,
+      116,
+      0,
+      117,
+      0,
+      "IMAGE"
+    ],
+    [
+      117,
+      117,
+      0,
+      118,
+      0,
+      "IMAGE"
+    ],
+    [
+      118,
+      118,
+      0,
+      119,
+      0,
+      "IMAGE"
+    ],
+    [
+      119,
+      119,
+      0,
+      120,
+      0,
+      "IMAGE"
+    ],
+    [
+      120,
+      120,
+      0,
+      121,
+      0,
+      "IMAGE"
+    ],
+    [
+      121,
+      121,
+      0,
+      122,
+      0,
+      "IMAGE"
+    ],
+    [
+      122,
+      122,
+      0,
+      123,
+      0,
+      "IMAGE"
+    ],
+    [
+      123,
+      123,
+      0,
+      124,
+      0,
+      "IMAGE"
+    ],
+    [
+      124,
+      124,
+      0,
+      125,
+      0,
+      "IMAGE"
+    ],
+    [
+      125,
+      125,
+      0,
+      126,
+      0,
+      "IMAGE"
+    ],
+    [
+      126,
+      126,
+      0,
+      127,
+      0,
+      "IMAGE"
+    ],
+    [
+      127,
+      127,
+      0,
+      128,
+      0,
+      "IMAGE"
+    ],
+    [
+      128,
+      128,
+      0,
+      129,
+      0,
+      "IMAGE"
+    ],
+    [
+      129,
+      129,
+      0,
+      130,
+      0,
+      "IMAGE"
+    ],
+    [
+      130,
+      130,
+      0,
+      131,
+      0,
+      "IMAGE"
+    ],
+    [
+      131,
+      131,
+      0,
+      132,
+      0,
+      "IMAGE"
+    ],
+    [
+      132,
+      132,
+      0,
+      133,
+      0,
+      "IMAGE"
+    ],
+    [
+      133,
+      133,
+      0,
+      134,
+      0,
+      "IMAGE"
+    ],
+    [
+      134,
+      134,
+      0,
+      135,
+      0,
+      "IMAGE"
+    ],
+    [
+      135,
+      135,
+      0,
+      136,
+      0,
+      "IMAGE"
+    ],
+    [
+      136,
+      136,
+      0,
+      137,
+      0,
+      "IMAGE"
+    ],
+    [
+      137,
+      137,
+      0,
+      138,
+      0,
+      "IMAGE"
+    ],
+    [
+      138,
+      138,
+      0,
+      139,
+      0,
+      "IMAGE"
+    ],
+    [
+      139,
+      139,
+      0,
+      140,
+      0,
+      "IMAGE"
+    ],
+    [
+      140,
+      140,
+      0,
+      141,
+      0,
+      "IMAGE"
+    ],
+    [
+      141,
+      141,
+      0,
+      142,
+      0,
+      "IMAGE"
+    ],
+    [
+      142,
+      142,
+      0,
+      143,
+      0,
+      "IMAGE"
+    ],
+    [
+      143,
+      143,
+      0,
+      144,
+      0,
+      "IMAGE"
+    ],
+    [
+      144,
+      144,
+      0,
+      145,
+      0,
+      "IMAGE"
+    ],
+    [
+      145,
+      145,
+      0,
+      146,
+      0,
+      "IMAGE"
+    ],
+    [
+      146,
+      146,
+      0,
+      147,
+      0,
+      "IMAGE"
+    ],
+    [
+      147,
+      147,
+      0,
+      148,
+      0,
+      "IMAGE"
+    ],
+    [
+      148,
+      148,
+      0,
+      149,
+      0,
+      "IMAGE"
+    ],
+    [
+      149,
+      149,
+      0,
+      150,
+      0,
+      "IMAGE"
+    ],
+    [
+      150,
+      150,
+      0,
+      151,
+      0,
+      "IMAGE"
+    ],
+    [
+      151,
+      151,
+      0,
+      152,
+      0,
+      "IMAGE"
+    ],
+    [
+      152,
+      152,
+      0,
+      153,
+      0,
+      "IMAGE"
+    ],
+    [
+      153,
+      153,
+      0,
+      154,
+      0,
+      "IMAGE"
+    ],
+    [
+      154,
+      154,
+      0,
+      155,
+      0,
+      "IMAGE"
+    ],
+    [
+      155,
+      155,
+      0,
+      156,
+      0,
+      "IMAGE"
+    ],
+    [
+      156,
+      156,
+      0,
+      157,
+      0,
+      "IMAGE"
+    ],
+    [
+      157,
+      157,
+      0,
+      158,
+      0,
+      "IMAGE"
+    ],
+    [
+      158,
+      158,
+      0,
+      159,
+      0,
+      "IMAGE"
+    ],
+    [
+      159,
+      159,
+      0,
+      160,
+      0,
+      "IMAGE"
+    ],
+    [
+      160,
+      160,
+      0,
+      161,
+      0,
+      "IMAGE"
+    ],
+    [
+      161,
+      161,
+      0,
+      162,
+      0,
+      "IMAGE"
+    ],
+    [
+      162,
+      162,
+      0,
+      163,
+      0,
+      "IMAGE"
+    ],
+    [
+      163,
+      163,
+      0,
+      164,
+      0,
+      "IMAGE"
+    ],
+    [
+      164,
+      164,
+      0,
+      165,
+      0,
+      "IMAGE"
+    ],
+    [
+      165,
+      165,
+      0,
+      166,
+      0,
+      "IMAGE"
+    ],
+    [
+      166,
+      166,
+      0,
+      167,
+      0,
+      "IMAGE"
+    ],
+    [
+      167,
+      167,
+      0,
+      168,
+      0,
+      "IMAGE"
+    ],
+    [
+      168,
+      168,
+      0,
+      169,
+      0,
+      "IMAGE"
+    ],
+    [
+      169,
+      169,
+      0,
+      170,
+      0,
+      "IMAGE"
+    ],
+    [
+      170,
+      170,
+      0,
+      171,
+      0,
+      "IMAGE"
+    ],
+    [
+      171,
+      171,
+      0,
+      172,
+      0,
+      "IMAGE"
+    ],
+    [
+      172,
+      172,
+      0,
+      173,
+      0,
+      "IMAGE"
+    ],
+    [
+      173,
+      173,
+      0,
+      174,
+      0,
+      "IMAGE"
+    ],
+    [
+      174,
+      174,
+      0,
+      175,
+      0,
+      "IMAGE"
+    ],
+    [
+      175,
+      175,
+      0,
+      176,
+      0,
+      "IMAGE"
+    ],
+    [
+      176,
+      176,
+      0,
+      177,
+      0,
+      "IMAGE"
+    ],
+    [
+      177,
+      177,
+      0,
+      178,
+      0,
+      "IMAGE"
+    ],
+    [
+      178,
+      178,
+      0,
+      179,
+      0,
+      "IMAGE"
+    ],
+    [
+      179,
+      179,
+      0,
+      180,
+      0,
+      "IMAGE"
+    ],
+    [
+      180,
+      180,
+      0,
+      181,
+      0,
+      "IMAGE"
+    ],
+    [
+      181,
+      181,
+      0,
+      182,
+      0,
+      "IMAGE"
+    ],
+    [
+      182,
+      182,
+      0,
+      183,
+      0,
+      "IMAGE"
+    ],
+    [
+      183,
+      183,
+      0,
+      184,
+      0,
+      "IMAGE"
+    ],
+    [
+      184,
+      184,
+      0,
+      185,
+      0,
+      "IMAGE"
+    ],
+    [
+      185,
+      185,
+      0,
+      186,
+      0,
+      "IMAGE"
+    ],
+    [
+      186,
+      186,
+      0,
+      187,
+      0,
+      "IMAGE"
+    ],
+    [
+      187,
+      187,
+      0,
+      188,
+      0,
+      "IMAGE"
+    ],
+    [
+      188,
+      188,
+      0,
+      189,
+      0,
+      "IMAGE"
+    ],
+    [
+      189,
+      189,
+      0,
+      190,
+      0,
+      "IMAGE"
+    ],
+    [
+      190,
+      190,
+      0,
+      191,
+      0,
+      "IMAGE"
+    ],
+    [
+      191,
+      191,
+      0,
+      192,
+      0,
+      "IMAGE"
+    ],
+    [
+      192,
+      192,
+      0,
+      193,
+      0,
+      "IMAGE"
+    ],
+    [
+      193,
+      193,
+      0,
+      194,
+      0,
+      "IMAGE"
+    ],
+    [
+      194,
+      194,
+      0,
+      195,
+      0,
+      "IMAGE"
+    ],
+    [
+      195,
+      195,
+      0,
+      196,
+      0,
+      "IMAGE"
+    ],
+    [
+      196,
+      196,
+      0,
+      197,
+      0,
+      "IMAGE"
+    ],
+    [
+      197,
+      197,
+      0,
+      198,
+      0,
+      "IMAGE"
+    ],
+    [
+      198,
+      198,
+      0,
+      199,
+      0,
+      "IMAGE"
+    ],
+    [
+      199,
+      199,
+      0,
+      200,
+      0,
+      "IMAGE"
+    ],
+    [
+      200,
+      200,
+      0,
+      201,
+      0,
+      "IMAGE"
+    ],
+    [
+      201,
+      201,
+      0,
+      202,
+      0,
+      "IMAGE"
+    ],
+    [
+      202,
+      202,
+      0,
+      203,
+      0,
+      "IMAGE"
+    ],
+    [
+      203,
+      203,
+      0,
+      204,
+      0,
+      "IMAGE"
+    ],
+    [
+      204,
+      204,
+      0,
+      205,
+      0,
+      "IMAGE"
+    ],
+    [
+      205,
+      205,
+      0,
+      206,
+      0,
+      "IMAGE"
+    ],
+    [
+      206,
+      206,
+      0,
+      207,
+      0,
+      "IMAGE"
+    ],
+    [
+      207,
+      207,
+      0,
+      208,
+      0,
+      "IMAGE"
+    ],
+    [
+      208,
+      208,
+      0,
+      209,
+      0,
+      "IMAGE"
+    ],
+    [
+      209,
+      209,
+      0,
+      210,
+      0,
+      "IMAGE"
+    ],
+    [
+      210,
+      210,
+      0,
+      211,
+      0,
+      "IMAGE"
+    ],
+    [
+      211,
+      211,
+      0,
+      212,
+      0,
+      "IMAGE"
+    ],
+    [
+      212,
+      212,
+      0,
+      213,
+      0,
+      "IMAGE"
+    ],
+    [
+      213,
+      213,
+      0,
+      214,
+      0,
+      "IMAGE"
+    ],
+    [
+      214,
+      214,
+      0,
+      215,
+      0,
+      "IMAGE"
+    ],
+    [
+      215,
+      215,
+      0,
+      216,
+      0,
+      "IMAGE"
+    ],
+    [
+      216,
+      216,
+      0,
+      217,
+      0,
+      "IMAGE"
+    ],
+    [
+      217,
+      217,
+      0,
+      218,
+      0,
+      "IMAGE"
+    ],
+    [
+      218,
+      218,
+      0,
+      219,
+      0,
+      "IMAGE"
+    ],
+    [
+      219,
+      219,
+      0,
+      220,
+      0,
+      "IMAGE"
+    ],
+    [
+      220,
+      220,
+      0,
+      221,
+      0,
+      "IMAGE"
+    ],
+    [
+      221,
+      221,
+      0,
+      222,
+      0,
+      "IMAGE"
+    ],
+    [
+      222,
+      222,
+      0,
+      223,
+      0,
+      "IMAGE"
+    ],
+    [
+      223,
+      223,
+      0,
+      224,
+      0,
+      "IMAGE"
+    ],
+    [
+      224,
+      224,
+      0,
+      225,
+      0,
+      "IMAGE"
+    ],
+    [
+      225,
+      225,
+      0,
+      226,
+      0,
+      "IMAGE"
+    ],
+    [
+      226,
+      226,
+      0,
+      227,
+      0,
+      "IMAGE"
+    ],
+    [
+      227,
+      227,
+      0,
+      228,
+      0,
+      "IMAGE"
+    ],
+    [
+      228,
+      228,
+      0,
+      229,
+      0,
+      "IMAGE"
+    ],
+    [
+      229,
+      229,
+      0,
+      230,
+      0,
+      "IMAGE"
+    ],
+    [
+      230,
+      230,
+      0,
+      231,
+      0,
+      "IMAGE"
+    ],
+    [
+      231,
+      231,
+      0,
+      232,
+      0,
+      "IMAGE"
+    ],
+    [
+      232,
+      232,
+      0,
+      233,
+      0,
+      "IMAGE"
+    ],
+    [
+      233,
+      233,
+      0,
+      234,
+      0,
+      "IMAGE"
+    ],
+    [
+      234,
+      234,
+      0,
+      235,
+      0,
+      "IMAGE"
+    ],
+    [
+      235,
+      235,
+      0,
+      236,
+      0,
+      "IMAGE"
+    ],
+    [
+      236,
+      236,
+      0,
+      237,
+      0,
+      "IMAGE"
+    ],
+    [
+      237,
+      237,
+      0,
+      238,
+      0,
+      "IMAGE"
+    ],
+    [
+      238,
+      238,
+      0,
+      239,
+      0,
+      "IMAGE"
+    ],
+    [
+      239,
+      239,
+      0,
+      240,
+      0,
+      "IMAGE"
+    ],
+    [
+      240,
+      240,
+      0,
+      241,
+      0,
+      "IMAGE"
+    ],
+    [
+      241,
+      241,
+      0,
+      242,
+      0,
+      "IMAGE"
+    ],
+    [
+      242,
+      242,
+      0,
+      243,
+      0,
+      "IMAGE"
+    ],
+    [
+      243,
+      243,
+      0,
+      244,
+      0,
+      "IMAGE"
+    ],
+    [
+      244,
+      244,
+      0,
+      245,
+      0,
+      "IMAGE"
+    ],
+    [
+      245,
+      245,
+      0,
+      246,
+      0,
+      "IMAGE"
+    ],
+    [
+      246,
+      246,
+      0,
+      247,
+      0,
+      "IMAGE"
+    ],
+    [
+      247,
+      247,
+      0,
+      248,
+      0,
+      "IMAGE"
+    ],
+    [
+      248,
+      248,
+      0,
+      249,
+      0,
+      "IMAGE"
+    ],
+    [
+      249,
+      249,
+      0,
+      250,
+      0,
+      "IMAGE"
+    ],
+    [
+      250,
+      250,
+      0,
+      251,
+      0,
+      "IMAGE"
+    ],
+    [
+      251,
+      251,
+      0,
+      252,
+      0,
+      "IMAGE"
+    ],
+    [
+      252,
+      252,
+      0,
+      253,
+      0,
+      "IMAGE"
+    ],
+    [
+      253,
+      253,
+      0,
+      254,
+      0,
+      "IMAGE"
+    ],
+    [
+      254,
+      254,
+      0,
+      255,
+      0,
+      "IMAGE"
+    ],
+    [
+      255,
+      255,
+      0,
+      256,
+      1,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

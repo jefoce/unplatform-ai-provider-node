@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:upai:1:error",
+  "title": "upai/1 error",
+  "type": "object",
+  "required": [
+    "error"
+  ],
+  "properties": {
+    "error": {
+      "type": "object",
+      "required": [
+        "code",
+        "message",
+        "details"
+      ],
+      "properties": {
+        "code": {
+          "enum": [
+            "invalid_request",
+            "unauthorized",
+            "forbidden",
+            "config_invalid",
+            "model_not_found",
+            "job_not_found",
+            "upload_not_found",
+            "not_found",
+            "method_not_allowed",
+            "too_large",
+            "insufficient_storage",
+            "workflow_invalid",
+            "queue_full",
+            "comfy_unavailable",
+            "job_failed",
+            "internal",
+            "timeout"
+          ]
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

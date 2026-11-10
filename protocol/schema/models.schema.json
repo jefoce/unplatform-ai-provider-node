@@ -1,0 +1,383 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:upai:1:models",
+  "title": "upai/1 model list",
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/model"
+      }
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "model": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "description",
+        "kind",
+        "status",
+        "status_reason",
+        "updated_at",
+        "pricing",
+        "capabilities"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9._-]{0,128}$"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "video",
+            "image"
+          ]
+        },
+        "status": {
+          "enum": [
+            "ready",
+            "stale",
+            "invalid"
+          ]
+        },
+        "status_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "updated_at": {
+          "type": "string"
+        },
+        "pricing": {
+          "type": "object",
+          "required": [
+            "per_run_usd"
+          ],
+          "properties": {
+            "per_run_usd": {
+              "type": "number"
+            }
+          },
+          "additionalProperties": true
+        },
+        "capabilities": {
+          "$ref": "#/$defs/capabilities"
+        },
+        "workflow": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": true
+            }
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "capabilities": {
+      "type": "object",
+      "required": [
+        "prompt",
+        "negative_prompt",
+        "references",
+        "resolutions",
+        "default_resolution",
+        "aspect_ratios",
+        "default_aspect_ratio",
+        "sizes",
+        "seed",
+        "reference_limits"
+      ],
+      "properties": {
+        "prompt": {
+          "$ref": "#/$defs/prompt"
+        },
+        "negative_prompt": {
+          "type": "boolean"
+        },
+        "references": {
+          "type": "object",
+          "required": [
+            "image",
+            "video",
+            "audio"
+          ],
+          "properties": {
+            "image": {
+              "$ref": "#/$defs/reference"
+            },
+            "video": {
+              "$ref": "#/$defs/reference"
+            },
+            "audio": {
+              "$ref": "#/$defs/reference"
+            }
+          },
+          "additionalProperties": true
+        },
+        "resolutions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "default_resolution": {
+          "type": "string"
+        },
+        "aspect_ratios": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "default_aspect_ratio": {
+          "type": "string"
+        },
+        "sizes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "seed": {
+          "type": "boolean"
+        },
+        "reference_limits": {
+          "type": "object",
+          "required": [
+            "image"
+          ],
+          "properties": {
+            "image": {
+              "$ref": "#/$defs/referenceLimit"
+            }
+          },
+          "additionalProperties": true
+        },
+        "frames": {
+          "$ref": "#/$defs/frames"
+        },
+        "duration": {
+          "$ref": "#/$defs/duration"
+        },
+        "fps": {
+          "type": "number"
+        },
+        "frame_rule": {
+          "$ref": "#/$defs/frameRule"
+        },
+        "audio_output": {
+          "type": "boolean"
+        },
+        "count": {
+          "$ref": "#/$defs/count"
+        }
+      },
+      "additionalProperties": true
+    },
+    "prompt": {
+      "type": "object",
+      "required": [
+        "required",
+        "max_chars"
+      ],
+      "properties": {
+        "required": {
+          "type": "boolean"
+        },
+        "max_chars": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reference_label": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 64
+        },
+        "reference_labels": {
+          "type": "object",
+          "properties": {
+            "image": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 64
+            },
+            "video": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 64
+            },
+            "audio": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 64
+            }
+          },
+          "additionalProperties": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 64
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "reference": {
+      "type": "object",
+      "required": [
+        "max",
+        "required"
+      ],
+      "properties": {
+        "max": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "required": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": true
+    },
+    "referenceLimit": {
+      "type": "object",
+      "required": [
+        "max_bytes",
+        "formats"
+      ],
+      "properties": {
+        "max_bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "formats": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "frames": {
+      "type": "object",
+      "required": [
+        "start",
+        "end",
+        "start_required",
+        "end_required"
+      ],
+      "properties": {
+        "start": {
+          "type": "boolean"
+        },
+        "end": {
+          "type": "boolean"
+        },
+        "start_required": {
+          "type": "boolean"
+        },
+        "end_required": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "duration": {
+      "type": "object",
+      "required": [
+        "min",
+        "max",
+        "default",
+        "step"
+      ],
+      "properties": {
+        "min": {
+          "type": "number"
+        },
+        "max": {
+          "type": "number"
+        },
+        "default": {
+          "type": "number"
+        },
+        "step": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": true
+    },
+    "frameRule": {
+      "type": "object",
+      "required": [
+        "mod",
+        "add"
+      ],
+      "properties": {
+        "mod": {
+          "type": "integer"
+        },
+        "add": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": true
+    },
+    "count": {
+      "type": "object",
+      "required": [
+        "max"
+      ],
+      "properties": {
+        "max": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}
