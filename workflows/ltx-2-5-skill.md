@@ -1,11 +1,11 @@
 ---
 name: "ltx-2-5-director"
-description: "Author copy-paste LTX 2.5 prompts for text-to-video, image-to-video, and first-last-frame video with native audio, dialogue, and camera direction."
+description: "Author copy-paste LTX 2.5 prompts for text-to-video, image-to-video, first-last-frame video, video extend, and video upscale with native audio, dialogue, and camera direction."
 ---
 
 # LTX 2.5 Director
 
-Prompt handbook for the app model `ltx-2-5`. LTX 2.5 generates picture and sound in one pass. The prompt is the only creative control this skill writes. Settings, samplers, frame count, and model files are fixed by the app.
+Prompt handbook for the app models `ltx-2-5`, `ltx-2-5-extend` and `ltx-2-5-upscale`. LTX 2.5 generates picture and sound in one pass. The prompt is the only creative control this skill writes, except on upscale, which takes no prompt. Settings, samplers, frame count, and model files are fixed by the app.
 
 ## Core Rule: Style First
 
@@ -16,7 +16,7 @@ LTX responds to cinematic prose, not tag lists. No weight brackets, no quality t
 ## WORKFLOW
 
 1. **Read inputs.** Collect the user request, the reference frames, and any dialogue, music, or sound direction.
-2. **Detect mode by frame count.** Zero reference frames means text-to-video. One means image-to-video with a start frame. Two means first-last-frame video. Never guess the mode from wording alone.
+2. **Detect the mode.** Zero reference frames means text-to-video. One image means image-to-video with a start frame. Two images mean first-last-frame video. One video and a continuation request mean extend. One video and a resolution request mean upscale. Never guess the mode from wording alone.
 3. **Detect style.** Name the requested style in one or two words. If absent, use the style visible in the reference frames. If still absent, use neutral cinematic live action.
 4. **Build the frame map.** For the app default of 121 frames at 24 fps, the clip runs about 5.04 seconds. Assign beats: opening state, main action, settling end. For first-last-frame, the last beat must land on `@Image 2`.
 5. **Write the prompt.** Use the section order in this document. One flowing paragraph. Present tense. One action beat and one camera move.
@@ -35,6 +35,16 @@ One reference frame, `@Image 1`. It is the first frame. Describe only what happe
 ### First-Last-Frame Video
 
 Two reference frames. `@Image 1` is the first frame. `@Image 2` is the last frame. Describe the motion and camera path that connects them. The model interpolates between both images. Keep both frames the same aspect ratio. Do not describe a cut. Do not describe a new location. The transition must be physically reachable in about five seconds.
+
+### Extend
+
+Model `ltx-2-5-extend`. Video reference 1 is the source, label `@Video 1`. The last 3 s of the source seed the extension. New video runs 1 to 10 s, default 5 s. Output is the source plus the new segment. Audio continues across the join.
+
+Describe only what happens after the source ends. Start from the final visible moment and carry the action, camera and sound forward. Preserve identity, wardrobe, location and light. Do not describe a cut, a new scene or a reset. One action beat must fit the selected extension length.
+
+### Upscale
+
+Model `ltx-2-5-upscale`. Video reference 1 is the source, target longest edge 720p or 1080p, no prompt. This is video-to-video super-resolution, not a re-render. It preserves the source composition and motion and sharpens the pixels. If the user asks for a prompt, say this model does not use one. Never describe new content, a style change, a new camera move or a cut.
 
 ## GENERAL WRITING RULES
 
@@ -57,7 +67,7 @@ Two reference frames. `@Image 1` is the first frame. `@Image 2` is the last fram
 - `@Image 1`: start frame in image-to-video, first frame in first-last-frame.
 - `@Image 2`: last frame in first-last-frame only. It has no meaning in text-to-video or single-frame image-to-video.
 - Never emit internal model tokens, angle-bracket placeholders, base64, file paths or node names. The app converts labels to model-internal tokens under the hood.
-- Never emit `@Video`, `@Audio`, or `@Image 0`. This skill handles image frames only.
+- Use `@Video 1` only in extend. Never emit `@Audio` or `@Image 0`. Upscale takes no prompt.
 - Do not explain the label system inside the prompt. Labels are instructions, not prose.
 
 ## PROMPT STRUCTURE
@@ -151,13 +161,19 @@ Pattern: connect `@Image 1` to `@Image 2` with one continuous action and one cam
 
 > The shot begins on `@Image 1`, a robot hand open against a dark workshop wall, and ends on `@Image 2`, the same hand closed around a glowing energy cell. The hand rotates toward the cell, fingers curl one by one, and the glow rises across the metal palm. The camera pushes in slowly and settles on the closed hand. Low electrical hum, a soft servo whir, a single metallic click at the close, no music.
 
+### Extend
+
+Pattern: anchor the last moment of `@Video 1`, continue one action, keep the same camera and audio bed.
+
+> Continue directly from the last frame of `@Video 1`. The fisherman lifts the rope once more and coils it over his forearm, then looks toward the first light on the horizon. The same cold blue dawn, wet dock and yellow raincoat stay unchanged. The camera holds its slow track and settles beside him. Rope creaks through wet palms, water laps at the pilings, a distant gull, no music.
+
 ## QUALITY CHECK
 
 Before returning a prompt, verify:
 
-- **Mode.** Frame count matches the mode. Zero frames for text-to-video, one for image-to-video, two for first-last-frame.
-- **Frame roles.** `@Image 1` is the start. `@Image 2` is the end. No internal tokens or invented labels appear.
-- **Motion budget.** One action beat and one camera move fit inside about five seconds. The end state is reachable.
+- **Mode.** Frame count matches the mode. Zero frames for text-to-video, one for image-to-video, two for first-last-frame, one video for extend. Upscale has no prompt.
+- **Frame roles.** `@Image 1` is the start. `@Image 2` is the end. `@Video 1` is the extend source. No internal tokens or invented labels appear.
+- **Motion budget.** One action beat and one camera move fit inside the selected length. Extend needs one continuation beat, not a new scene. The end state is reachable.
 - **Preservation.** Image modes keep identity, wardrobe, location, and light from the reference frames. The prompt does not redesign what is already visible.
 - **Audio.** An ambience bed, action-linked foley, and an explicit music choice or "no music" are present. Dialogue is quoted, attributed, short, and single-speaker.
 - **Style.** The requested style is stated once and not contradicted. Photoreal appears only when requested.
@@ -170,4 +186,6 @@ Before returning a prompt, verify:
 - Highly chaotic motion can introduce artifacts. Simpler, plausible motion is more reliable.
 - Prompt following is sensitive to style. Tag lists and prompts copied from other video models underperform. Rewrite them as flowing prose.
 - Five seconds is short. Multi-shot generation exists in LTX 2.5, but two or more cuts in five seconds usually need shorter, clearer beats. Use a single continuous take unless the user explicitly asks for cuts.
+- Extend is capped by the source window. It keeps the last 3 s as context, so the new action must grow from what is already visible.
+- Upscale writes no prompt. Use it only to enlarge the source, never to change content.
 - A five-second dialogue budget of about 10 to 12 words is an estimate derived from third-party guidance, not an official figure.

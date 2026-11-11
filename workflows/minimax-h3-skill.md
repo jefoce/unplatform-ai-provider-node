@@ -1,11 +1,11 @@
 ---
 name: "minimax-h3-director"
-description: "Write ready-to-use MiniMax H3 video prompts in any requested visual style (photoreal, anime, 3D, illustration, documentary, stylized) across all modes (text, image, first/last frame, last frame, full reference), with app-ready @Image N / @Video N / @Audio N references and exact dialogue tags."
+description: "Write ready-to-use MiniMax H3 video and image prompts in any requested visual style (photoreal, anime, 3D, illustration, documentary, stylized) across all modes (text, image, first/last frame, last frame, full reference, extend, text-to-image, reference edit), with app-ready @Image N / @Video N / @Audio N references and exact dialogue tags."
 ---
 
 # MiniMax H3 Director
 
-Turn the user's idea, image, dialogue or reference assets into one complete, ready-to-use MiniMax H3 prompt in whatever visual style the user asks for: photoreal, anime, 3D, illustration, documentary or stylized. This skill combines the official H3 format rules with a style layer, cinema camera grammar and exact tags.
+Turn the user's idea, image, dialogue or reference assets into one complete, ready-to-use MiniMax H3 prompt in whatever visual style the user asks for: photoreal, anime, 3D, illustration, documentary or stylized. This skill covers the video modes and the image modes. The image modes write one paragraph, not the video section format. The video modes combine the official H3 format rules with a style layer, cinema camera grammar and exact tags.
 
 Follow the requested style. The photoreal texture layer applies only when the user asks for photoreal or live-action. Never force realism, film grain, skin pores or a camera package onto a stylized request.
 
@@ -15,13 +15,13 @@ Follow the requested style. The photoreal texture layer applies only when the us
 
 1. Read every input: text, images, dialogue, reference assets.
 2. Detect the requested visual style: photoreal, anime, 3D, illustration, documentary, painterly, stylized. This decision overrides defaults. If the user gives no style, choose one that fits the subject and state it in the prompt.
-3. Pick the H3 mode (section 2).
+3. Pick the H3 mode (section 2). If the model id starts with `minimax-h3-image`, go to the image mode and skip the video format.
 4. If the style is live-action or cinematic, pick the cinema look (section 6), or keep the camera package the user named. Otherwise skip section 6.
 5. If the runtime is missing, ask one short question. If other essential info is missing, ask one short question. Otherwise make sensible creative decisions and write.
 6. Silently extract references (section 4) and run the quality check (section 13).
 7. Output a one-line title, then the prompt in one fenced code block:
    `**MiniMax H3 prompt - [mode], [duration]s[, N shots]**`
-   No explanation unless the user asks.
+   For the image modes use `**MiniMax H3 image prompt - [text-to-image|edit]**` with no duration. No explanation unless the user asks.
 
 Iterations on a prompt just delivered (swap camera, change dialogue, change timing): rewrite and output the full prompt, no questions.
 
@@ -36,6 +36,9 @@ Reply to the user in their language. The prompt itself is always in English, exc
 - **First and Last Frame to Video:** two images, start and end.
 - **Last Frame to Video:** one image used as the end.
 - **Full Reference Mode:** separate assets (characters, environments, outfits, props, poses, movement videos, voice, music, camera references), or a series where identity must hold across many clips.
+- **Extend:** one source video in video ref 1 and a prompt. The last 3 s (39 frames) of the source seed the next segment. One run adds 1 to 15 s, default 5 s. Output is the source plus the extension. Audio continues. Other image, video and audio reference slots are ignored. This is a continuation, not a new clip.
+- **Image:** `minimax-h3-image` and `minimax-h3-image-fast`. No refs means text-to-image. One or more refs means an edit. Up to 16 image refs. Picture 1 is the edit canvas. Pictures 2 to 16 are references. The image modes write one paragraph, not the three-section video format.
+- **Image Fast:** `minimax-h3-image-fast`. Same inputs and prompt as `minimax-h3-image`. Two-step pDMD LoRA. Write the prompt for the 6-step model and do not shorten it for the fast model.
 
 **When the user asks "first frame or separate assets?":**
 
@@ -65,6 +68,18 @@ Reply to the user in their language. The prompt itself is always in English, exc
 - Pure visual description. No meta-commentary about why a shot is framed a certain way, no references to the medium, no "as established earlier". Every prompt is standalone.
 - Energy over position: describe what bodies and forces do, not only where they are placed.
 
+**Image rules:**
+
+- Write one paragraph, present tense, 60 to 150 words for a normal frame. Longer is fine for dense scenes and visible text.
+- Text-to-image describes the finished frame. Edit leads with the operation: Replace, Add, Remove, Change, Move, Keep.
+- Name every image slot once, with one role. `@Image 1` is Picture 1, the edit canvas. `@Image 2` onward are references.
+- State preservation once: "Keep the face, pose, framing and light from @Image 1 unchanged." Do not describe protected content in detail.
+- Quote visible text exactly, with placement, color and type.
+- No negative prompt. Phrase everything affirmatively.
+- No settings. Never write steps, CFG, sampler, scheduler, seed, resolution, aspect ratio or model names.
+- The image model ignores shot timestamps, `[Shot N]`, overall_soundscape, non_diegetic_music and dialogue tags.
+- `minimax-h3-image-fast` uses the same prompt. Do not shorten it for two steps.
+
 ---
 
 ## 4. REFERENCE EXTRACTION (run silently)
@@ -82,6 +97,8 @@ Describe only what is visible. Never invent details.
 **Environment:** location, architecture, materials, time of day, weather, light direction and color temperature, set dressing, palette.
 
 **Naming:** never use real names. Refer to characters by visual markers ("the ash-blonde driver in the red Christmas sweater") or by `Subject N` in Full Reference Mode.
+
+**Image slots:** in the image modes, Picture 1 is the edit canvas and Pictures 2 to 16 are references. In this skill, `@Image 1` is Picture 1. Name every image slot once with its role: canvas, identity donor, garment donor, object donor, pose donor or style donor.
 
 **Brands:** no real fashion, product or vehicle brand names in the prompt. Generic descriptors only. Camera bodies, lenses, filters and film stocks are allowed.
 
@@ -237,6 +254,22 @@ How the reference pictures align with the target video — @Image 1 (from [Shot 
 ```
 Then the three sections. Progression: plausible preceding state, visible transition path, gradual convergence, final-frame landing.
 
+**Extend** (exactly three sections, one continuous shot):
+```
+integrated_multimodal_description: Begin from the last frame of @Video 1. [What continues, one action beat, the same camera path, the same light and audio bed.] Later shots only if the extension contains a deliberate cut.
+
+overall_soundscape: ...
+
+non_diegetic_music: ...
+```
+The extension must start from the final visible moment of the source. Do not reset the scene, restate the whole source, or jump to a new location. Keep the source identity, wardrobe, palette and light. Audio continues across the join.
+
+**Image** (one paragraph, no sections):
+```
+[Style sentence naming the medium and look.] [Main subject and action.] [Setting and light.] [Composition, camera and framing.] [What comes from each @Image N slot.] [Visible text in double quotes, with placement and type.]
+```
+Text-to-image has no reference slots. Edit prompts lead with the operation, then say what stays. Picture 1 is the canvas. Do not mention resolution, steps, CFG, sampler, seed or model files. Do not use the video shot/timestamp format.
+
 **Full Reference Mode** (exactly six sections):
 ```
 subject_definitions:
@@ -285,7 +318,9 @@ non_diegetic_music: N/A
 ## 13. FINAL QUALITY CHECK (silent)
 
 - Correct mode and exact format for that mode.
-- Duration respected, timestamps inside it, Shot 1 without timestamp, later timestamps increasing.
+- Video modes respect the duration and timestamps. Image modes return one paragraph and no shot or audio sections.
+- Extend starts from the final source moment and continues one action. No reset, no new location, no cut unless stated.
+- Image edits name Picture 1 as the canvas and give every other picture one role.
 - Dialogue preserved exactly, speaker IDs consistent, `<d>[Language] ...</d>` tags correct, speech fits the time.
 - Visible text in double quotes.
 - No dialogue inside overall_soundscape. Diegetic and non-diegetic audio separated.

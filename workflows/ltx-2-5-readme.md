@@ -4,7 +4,7 @@
 
 ## What it does
 
-One UPAI video model, id `ltx-2-5`, name `LTX 2.5`, kind `video`. One graph with three paths selected by the optional start and end frames: text-to-video, image-to-video and first-last-frame video. Audio is generated and muxed into the final MP4 by UPAI Output.
+Three UPAI video models: `ltx-2-5` (text, start and end frame video), `ltx-2-5-extend` (extend a source video) and `ltx-2-5-upscale` (upscale a source video). The `ltx-2-5` graph has three paths selected by the optional start and end frames: text-to-video, image-to-video and first-last-frame video. Audio is generated and muxed into the final MP4 by UPAI Output.
 
 ## Modes
 
@@ -16,6 +16,26 @@ One UPAI video model, id `ltx-2-5`, name `LTX 2.5`, kind `video`. One graph with
 
 `UPAI StartFrame.present` and `UPAI EndFrame.present` drive lazy core `ComfySwitchNode` switches in the `PATH SELECT` group. Only the selected branch runs. Both frame inputs are optional. `UPAI EndFrame` without `UPAI StartFrame` still runs text-to-video by design.
 
+## Extend
+
+Model id `ltx-2-5-extend`, name `LTX 2.5 Extend`, kind `video`. Video reference 1 is the source. The last 3 seconds of the source are the reference window. The model generates up to 10 seconds of new video, default 5 seconds. Total output is source plus new. Audio continues from the source and new audio is appended. The source video is required.
+
+The `EXTEND` group inlines the reference extender graph. It uses the same model, CLIP, video VAE, audio VAE and latent upscale files as `ltx-2-5`. No new model files.
+
+Extend needs the `ComfyUI-KJNodes` pack, Manager id `comfyui-kjnodes`. It uses `GetImageRangeFromBatch`, `ImageBatchMulti`, `ImageResizeKJv2`, `GetImageSizeAndCount`, `LTXVAudioVideoMask`, `SimpleCalculatorKJ` and `INTConstant`.
+
+Memory estimate: the same files as `ltx-2-5`. The peak is sampling the new segment, not the whole source. At 1080p and 5 s the estimate is 24.96 GiB, the same as the base flow, and it grows with the new duration. Use a 32 GB card, or 720p and a shorter extension on a smaller card.
+
+## Upscale
+
+Model id `ltx-2-5-upscale`, name `LTX 2.5 Upscale`, kind `video`. Video reference 1 is the source. The target is the longest edge, 720p (1280) or 1080p (1920), default 1080p. Aspect ratio comes from the source. Audio passes through unchanged. The source video is required.
+
+The `UPSCALE` group inlines the reference enhancer graph. It uses the same model, CLIP and video VAE files as `ltx-2-5`. No new model files.
+
+Upscale needs the `ComfyUI-LTXVideo` pack, Manager id `ComfyUI-LTXVideo`. It uses `LTXVLoopingSampler` and `LTXVSpatioTemporalTiledVAEDecode`.
+
+Memory estimate: the same files as `ltx-2-5`. Sampling runs over the source length at the target longest edge. At 1080p and 121 frames the estimate is 24.96 GiB and it grows with the source length. Use a 32 GB card, or 720p on a smaller card.
+
 ## Quick start
 
 1. Install ComfyUI 0.43.0 or newer and the `unplatform-ai-provider-node` pack.
@@ -25,7 +45,7 @@ One UPAI video model, id `ltx-2-5`, name `LTX 2.5`, kind `video`. One graph with
 5. Restart ComfyUI after installing a pack. Save the workflow once so UPAI exports it.
 6. Check `GET /upai/api/v1/health`.
 
-The flow uses core ComfyUI 0.43.0 LTX nodes only. `ComfyUI-LTXVideo` is not required.
+The `ltx-2-5` graph uses core ComfyUI 0.43.0 LTX nodes only. Extend adds `ComfyUI-KJNodes`, upscale adds `ComfyUI-LTXVideo`. Install both through the ComfyUI Manager or the Error tab before opening those groups.
 
 ## Memory
 
@@ -60,22 +80,22 @@ Low VRAM:
 
 ## Models
 
-| File | Folder | Note |
-|---|---|---|
-| `ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors` | `models/diffusion_models` | auto |
-| `gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors` | `models/text_encoders` | auto |
-| `ltx-2.5-video-vae-conv-bf16.safetensors` | `models/vae` | auto |
-| `ltx-2.5-audio-vae-bf16.safetensors` | `models/vae` | auto |
-| `ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors` | `models/latent_upscale_models` | auto |
-| `ltx-2-19b-ic-lora-detailer.safetensors` | `models/loras` | auto |
+| File | Folder | Size | Note |
+|---|---|---:|---|
+| `ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors` | `models/diffusion_models` | 20.03 GiB | auto |
+| `gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors` | `models/text_encoders` | 14.32 GiB | auto |
+| `ltx-2.5-video-vae-conv-bf16.safetensors` | `models/vae` | 1.35 GiB | auto |
+| `ltx-2.5-audio-vae-bf16.safetensors` | `models/vae` | 0.34 GiB | auto |
+| `ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors` | `models/latent_upscale_models` | 0.93 GiB | auto |
+| `ltx-2-19b-ic-lora-detailer.safetensors` | `models/loras` | 2.44 GiB | auto |
 
 No GGUF file is used. The detailer LoRA is applied at strength 0.3.
 
 Licenses:
 
-- `ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors`, `ltx-2.5-video-vae-conv-bf16.safetensors`, `ltx-2.5-audio-vae-bf16.safetensors`, `ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors`: License: LTX-2.x Community License Agreement. Source: https://huggingface.co/Lightricks/LTX-2.5
-- `gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors`: License: Apache-2.0. Source: https://huggingface.co/google/gemma-4-12B
-- `ltx-2-19b-ic-lora-detailer.safetensors`: License: LTX-2 Community License. Source: https://huggingface.co/Lightricks/LTX-2-19b-IC-LoRA-Detailer
+- `ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors`, `ltx-2.5-video-vae-conv-bf16.safetensors`, `ltx-2.5-audio-vae-bf16.safetensors`, `ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors`: Author: Lightricks. License: LTX-2.x Community License Agreement. Source: https://huggingface.co/Lightricks/LTX-2.5
+- `gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors`: Author: Google. License: Apache-2.0. Source: https://huggingface.co/google/gemma-4-12B
+- `ltx-2-19b-ic-lora-detailer.safetensors`: Author: Lightricks. License: LTX-2 Community License. Source: https://huggingface.co/Lightricks/LTX-2-19b-IC-LoRA-Detailer
 
 ## Settings
 
