@@ -123,7 +123,7 @@
       "widgets_values": [
         "z-image",
         "Z-Image",
-        "Text-to-image and img2img with Z-Image base.",
+        "Text-to-image / image-to-image.",
         "image",
         true,
         0.0,

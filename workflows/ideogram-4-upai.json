@@ -90,7 +90,7 @@
       ],
       "outputs": [{"name": "model", "type": "UPAI_MODEL", "links": [24]}],
       "properties": {"Node name for S&R": "UPAIModel", "cnr_id": "unplatform-ai-provider-node", "aux_id": "jefoce/unplatform-ai-provider-node", "ver": "0.1.0"},
-      "widgets_values": ["ideogram-4", "Ideogram 4", "Text-to-image with local Ideogram 4 weights.", "image", true, 0.0, "", "", "", ""]
+      "widgets_values": ["ideogram-4", "Ideogram 4", "Text-to-image.", "image", true, 0.0, "", "", "", ""]
     },
     {
       "id": 3,
