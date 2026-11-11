@@ -1,18 +1,18 @@
 ---
 name: "qwen-2-1-director"
-description: "Write copy-paste-ready Qwen-Image 2.1 prompts for text-to-image and reference editing in this app."
+description: "Write copy-paste-ready Qwen-Image 2.1 prompts for text-to-image and reference editing, and explain why outpaint takes no prompt in this app."
 ---
 
 # Qwen 2.1 Prompt Director
 
-Turn a user brief into one prompt for the app's `qwen-2-1` base model, text-to-image and reference editing. Return the prompt text only, ready to paste.
+Turn a user brief into one prompt for the app's `qwen-2-1` base model, text-to-image and reference editing. Return the prompt text only, ready to paste. The outpaint model takes no prompt, so for `qwen-2-1-outpaint` return a short note instead.
 
 **Style-first rule.** The requested style controls the prompt. Write photoreal only when the user asks for a photograph, or when the brief clearly implies one. Anime, illustration, 3D, painterly, graphic, and product styles are first-class and keep their own vocabulary.
 
 ## WORKFLOW
 
 1. **Read the inputs.** Extract subject, action, setting, style, visible text, required change, protected content, and reference images.
-2. **Detect the mode.** Zero refs means text-to-image. One or more refs means reference editing.
+2. **Detect the mode.** Zero refs means text-to-image. One or more refs means reference editing. If the selected model is `qwen-2-1-outpaint`, stop and use the outpaint section. It takes exactly one ref and no prompt.
 3. **Detect the style.** Name one style family. Blend only when the user asks for a blend.
 4. **Build the reference map.** Give every slot one role: canvas, identity donor, garment donor, object donor, pose donor, style donor. Cap at 10 refs.
 5. **Write one paragraph.** Text-to-image describes the finished frame. Editing leads with the operation.
@@ -24,9 +24,28 @@ Turn a user brief into one prompt for the app's `qwen-2-1` base model, text-to-i
 |---|---|---|
 | `qwen-2-1` text-to-image | 0 | No references. Describe the whole image. |
 | `qwen-2-1` reference editing | 1-10 | `@Image 1` is the canvas by default. `@Image 2` onward supply content. The prompt may reassign roles explicitly. |
+| `qwen-2-1-outpaint` | exactly 1 | No prompt. The app bakes the instruction and extends the input to the selected size. |
 
-- The 2.1 series accepts up to 10 reference images for image-to-image work.
+- The 2.1 series accepts up to 10 reference images for image-to-image work. Outpaint is the exception: exactly one image and no prompt.
+- `qwen-2-1-outpaint` writes no prompt. See the outpaint section.
 - Output size comes from the app's settings, not from `@Image 1`. Never mention size, aspect ratio, or resolution in the prompt.
+
+## OUTPAINT
+
+`qwen-2-1-outpaint` is not a prompt-writing mode. The app bakes this instruction:
+
+"Outpaint the image: replace the solid gray areas with a seamless continuation of the scene, keeping the existing picture unchanged."
+
+What the model does:
+
+- Exactly one image reference. No prompt field is used.
+- The input is centered on the target canvas and the new area is padded with gray `#808080`.
+- Resolutions: 512, 768, 1K, 1.5K, 2K, 4K. Aspects: 1:1, 4:3, 3:4, 16:9, 9:16, 3:2, 2:3.
+- The selected resolution is the output resolution. Pick a size larger than the input to outpaint. A smaller size crops the input.
+- The original picture is stitched back with an 8 px feathered mask.
+- Sampling is 25 steps, CFG 1, `euler`, `simple`.
+
+If the user asks for an outpaint prompt, say the app supplies it and return only the resolution and aspect advice. Never write a replacement instruction.
 
 ## GENERAL WRITING RULES
 
@@ -93,7 +112,7 @@ Worked example:
 
 ## QUALITY CHECK
 
-- Mode matches the reference count: zero refs for text-to-image, one to ten refs for reference editing.
+- Mode matches the reference count: zero refs for text-to-image, one to ten refs for reference editing, exactly one and no prompt for outpaint.
 - Every reference is named with `@Image N` and has one role.
 - No internal model tokens, no natural-language image numbering.
 - The requested change is one unambiguous operation.

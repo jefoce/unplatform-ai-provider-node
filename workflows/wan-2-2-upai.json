@@ -449,7 +449,7 @@
       "widgets_values": [
         "wan-2-2",
         "Wan 2.2",
-        "Text, start and end frame video. Strong motion at 480p or 720p, 4 steps, silent.",
+        "Text-to-video / image-to-video / first-last-frame video. Silent.",
         "video",
         true,
         0.0,

@@ -90,7 +90,7 @@
       ],
       "outputs": [{"name": "model", "type": "UPAI_MODEL", "links": [47]}],
       "properties": {"Node name for S&R": "UPAIModel", "cnr_id": "unplatform-ai-provider-node", "aux_id": "jefoce/unplatform-ai-provider-node", "ver": "0.1.0"},
-      "widgets_values": ["krea-2", "Krea 2", "Text-to-image and style reference with Krea 2 Turbo.", "image", true, 0.0, "", "", "", ""]
+      "widgets_values": ["krea-2", "Krea 2", "Text-to-image / image-to-image with up to 2 references.", "image", true, 0.0, "", "", "", ""]
     },
     {
       "id": 5,

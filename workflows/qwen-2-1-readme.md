@@ -4,7 +4,7 @@
 
 ## What it does
 
-One UPAI image workflow for Qwen Image 2.1. It ships three model ids, `qwen-2-1`, `qwen-2-1-head-swap` and `qwen-2-1-body-swap`, all at 25 steps. The base model takes text or up to 10 reference images. The two swap models each take exactly 2 references.
+One UPAI image workflow for Qwen Image 2.1. It ships four model ids, `qwen-2-1`, `qwen-2-1-head-swap`, `qwen-2-1-body-swap` and `qwen-2-1-outpaint`, all at 25 steps. The base model takes text or up to 10 reference images. The two swap models each take exactly 2 references. The outpaint model takes exactly 1 reference and no prompt.
 
 ## Modes
 
@@ -13,8 +13,26 @@ One UPAI image workflow for Qwen Image 2.1. It ships three model ids, `qwen-2-1`
 | `qwen-2-1` | text or refs | fix LoRA with no refs, `REF LORAs` list with refs | 0 to 10 | dynamic |
 | `qwen-2-1-head-swap` | head swap | `bfs_head_v1.1_qwen_2.1` | exactly 2 | static |
 | `qwen-2-1-body-swap` | body swap | `bfs_body_swap_v1.0_qwen_2.1` | exactly 2 | static |
+| `qwen-2-1-outpaint` | outpaint | `qwen-image-2.1-outpaint-v2` | exactly 1 | baked |
 
 `qwen-2-1` watches the ten reference gates. Any reference present switches model and CLIP to the `REF LORAs` list, otherwise the fix LoRA. The swap models ignore the UPAI Prompt. Head swap uses image 1 as the base scene and image 2 for the head and face. Body swap uses image 1 as the base scene and image 2 for the body, clothing, shape and proportions.
+
+`qwen-2-1-head-swap` and `qwen-2-1-body-swap` use `Auto` aspect. The selected resolution sets the shorter edge, and the output aspect follows image 1.
+
+## Qwen 2.1 Outpaint
+
+`qwen-2-1-outpaint` extends one image to the selected resolution and aspect. It takes exactly 1 reference and no prompt. The prompt is baked in: "Outpaint the image: replace the solid gray areas with a seamless continuation of the scene, keeping the existing picture unchanged."
+
+- Resolution and aspect use the same lists as the base model: 512, 768, 1K, 1.5K, 2K and 4K across 1:1, 4:3, 3:4, 16:9, 9:16, 3:2 and 2:3.
+- The selected resolution is the output resolution. Qwen samples at that latent size.
+- The input image is centered on the target canvas.
+- Pick a resolution larger than the input to outpaint. A smaller resolution crops the input.
+- The new area is padded with gray `#808080`.
+- The outpaint LoRA is `qwen-image-2.1-outpaint-v2.safetensors`, 152 MiB.
+- The original picture is stitched back with an 8 px feathered mask.
+- Sampling is 25 steps, CFG 1, `euler`, `simple`.
+
+Memory estimate: the same files as `qwen-2-1` plus the outpaint LoRA. The peak is text encode at 9.21 GiB. Sampling is 8.76 GiB at 1K. Use a 12 GB card and 24 GB system RAM. 2K and 4K need more sampling memory.
 
 ## Quick start
 
@@ -66,6 +84,7 @@ Low VRAM:
 | `lenovo_qwen21.safetensors` | `models/loras` | auto |
 | `bfs_head_v1.1_qwen_2.1.safetensors` | `models/loras` | auto |
 | `bfs_body_swap_v1.0_qwen_2.1.safetensors` | `models/loras` | auto |
+| `qwen-image-2.1-outpaint-v2.safetensors` | `models/loras` | auto, 152 MiB |
 
 No GGUF file is used. There is no fp8 or lite variant.
 
@@ -78,8 +97,9 @@ Licenses:
 - `lenovo_qwen21.safetensors`: License: Apache-2.0. Source: https://huggingface.co/Danrisi/Lenovo_Qwen
 - `bfs_head_v1.1_qwen_2.1.safetensors`: License: MIT. Source: https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap
 - `bfs_body_swap_v1.0_qwen_2.1.safetensors`: License: MIT. Source: https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap
+- `qwen-image-2.1-outpaint-v2.safetensors`: Author: ausboss. License: Qwen Research License. Source: https://huggingface.co/ausboss/Qwen-Image-2.1-Outpaint-LoRA
 
-The refs path uses the `Power Lora Loader (rgthree)` node titled `REF LORAs`, so install `rgthree-comfy`. The fix and both swap paths use the core `LoraLoader`.
+The refs path uses the `Power Lora Loader (rgthree)` node titled `REF LORAs`, so install `rgthree-comfy`, Manager id `rgthree-comfy`. The fix, outpaint and both swap paths use the core `LoraLoader`.
 
 ## Settings
 

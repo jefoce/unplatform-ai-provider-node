@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "unplatform-ai-provider-node"
-version = "0.1.0"
-description = "ComfyUI node pack that serves tagged workflows over the upai/1 HTTP protocol."
+version = "0.1.1"
+description = "ComfyUI node pack that turns your workflows into models for Unplatform AI. Save a workflow with UPAI nodes, add one URL in the app, generate video and images on your own GPU."
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.10"

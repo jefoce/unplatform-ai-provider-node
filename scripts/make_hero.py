@@ -211,6 +211,7 @@ class PickerItem:
     description: str = ""
     badges: tuple[tuple[str, str], ...] = ()
     plus: bool = False
+    hold_override: float | None = None
 
     @property
     def height(self) -> int:
@@ -222,6 +223,8 @@ class PickerItem:
 
     @property
     def hold(self) -> float:
+        if self.hold_override is not None:
+            return self.hold_override
         return min(MAX_HOLD, 0.8 + 0.025 * (len(self.title) + len(self.description)))
 
 
@@ -597,32 +600,69 @@ def _wrap(text: str, width: float, size: float, weight: int) -> list[str]:
 IMAGE_ITEMS: tuple[PickerItem, ...] = (
     PickerItem(
         "FLUX.2 Klein",
-        description="Text-to-image and multi-image editing with FLUX.2 Klein 9B distilled.",
+        description="Text-to-image / image-to-image with up to 4 references.",
     ),
-    PickerItem("Ideogram 4", description="Text-to-image with local Ideogram 4 weights."),
-    PickerItem("Krea 2", description="Text-to-image and style reference with Krea 2 Turbo."),
-    PickerItem("Qwen 2.1", description="Text-to-image and reference LoRA editing."),
-    PickerItem("Qwen 2.1 Head Swap", description="Image 1 base, image 2 head."),
-    PickerItem("Qwen 2.1 Body Swap", description="Image 1 base, image 2 body."),
-    PickerItem("MOSS Image", description="Text-to-image and img2img with MOSS Image."),
-    PickerItem("Z-Image", description="Text-to-image and img2img with Z-Image base."),
+    PickerItem("Ideogram 4", description="Text-to-image.", hold_override=MAX_HOLD),
+    PickerItem(
+        "Krea 2",
+        description="Text-to-image / image-to-image with up to 2 references.",
+    ),
+    PickerItem(
+        "MiniMax H3 Image",
+        description="Text-to-image / image-to-image with up to 16 references.",
+    ),
+    PickerItem(
+        "MiniMax H3 Image Fast",
+        description="Fast 2-step text-to-image / image-to-image with up to 16 references.",
+    ),
+    PickerItem("MOSS Image", description="Text-to-image / image-to-image."),
+    PickerItem("MOSS Pose", description="Image-to-image with 1 pose reference."),
+    PickerItem(
+        "Qwen 2.1",
+        description="Text-to-image / image-to-image with up to 10 references.",
+    ),
+    PickerItem(
+        "Qwen 2.1 Head Swap",
+        description="Image-to-image with 2 references. No prompt.",
+    ),
+    PickerItem(
+        "Qwen 2.1 Body Swap",
+        description="Image-to-image with 2 references. No prompt.",
+    ),
+    PickerItem(
+        "Qwen 2.1 Outpaint",
+        description="Image-to-image outpaint to the selected resolution and aspect. No prompt.",
+    ),
+    PickerItem("Z-Image", description="Text-to-image / image-to-image."),
     PickerItem("Your workflow", plus=True),
 )
 
 VIDEO_ITEMS: tuple[PickerItem, ...] = (
     PickerItem(
         "LTX 2.5",
-        badges=(("monitor", "720–1080p"), ("clock", "1-5 s"), ("speaker", "")),
+        badges=(("monitor", "720-1080p"), ("clock", "1-5 s"), ("speaker", "")),
+    ),
+    PickerItem(
+        "LTX 2.5 Extend",
+        badges=(("monitor", "720-1080p"), ("clock", "1-10 s"), ("speaker", "")),
+    ),
+    PickerItem(
+        "LTX 2.5 Upscale",
+        badges=(("monitor", "720-1080p"), ("speaker", "")),
     ),
     PickerItem(
         "MiniMax H3",
-        badges=(("monitor", "352–1088p"), ("clock", "4-15 s"), ("speaker", "")),
+        badges=(("monitor", "352-1088p"), ("clock", "4-15 s"), ("speaker", "")),
     ),
     PickerItem(
         "MiniMax H3 Fast",
-        badges=(("monitor", "352–1088p"), ("clock", "4-15 s"), ("speaker", "")),
+        badges=(("monitor", "352-1088p"), ("clock", "4-15 s"), ("speaker", "")),
     ),
-    PickerItem("Wan 2.2", badges=(("monitor", "480–720p"), ("clock", "1-5 s"))),
+    PickerItem(
+        "MiniMax H3 Extend",
+        badges=(("monitor", "source"), ("clock", "1-15 s"), ("speaker", "")),
+    ),
+    PickerItem("Wan 2.2", badges=(("monitor", "480-720p"), ("clock", "1-5 s"))),
     PickerItem("Your workflow", plus=True),
 )
 

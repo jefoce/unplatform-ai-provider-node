@@ -6,7 +6,7 @@ ComfyUI 0.43 uses dynamic VRAM by default. `enables_dynamic_vram()` returns true
 
 Caching matters too. `--cache-ram` is the default mode. `--cache-none` lowers RAM and VRAM use at the cost of running every node again on each run.
 
-Qwen 2.1 and MiniMax H3 rows are measured. Other workflows are estimates.
+Qwen 2.1 and MiniMax H3 base rows are measured. The new model rows and all other workflows are estimates.
 
 ## Headroom
 
@@ -34,6 +34,18 @@ Measured on ComfyUI 0.43.0. Plain weights load at 1.00x the file size. LoRAs pat
 | Qwen 2.1 main model with LoRAs | 6.76 GiB | 6.76 GiB | 1.00 |
 | Qwen 2.1 VAE | 0.63 GiB | 0.63 GiB | 1.00 |
 
+## New model files
+
+Sizes are from the Hugging Face API. Loaded size is an estimate at 1.00x for plain weights. LoRAs patch the model and do not stay resident.
+
+| File | Size | Loaded | Workflow |
+|---|---:|---:|---|
+| MiniMax H3 Image model | 19.54 GiB | 19.54 GiB | `minimax-h3-image`, `minimax-h3-image-fast` |
+| MiniMax H3 Image VAE | 1.09 GiB | 1.09 GiB | `minimax-h3-image`, `minimax-h3-image-fast` |
+| Depth Anything V2 Small | 94.6 MiB | 94.6 MiB | `moss-image-pose` |
+
+`minimax-h3-extend` and both LTX models add no files. They reuse the video files already listed above.
+
 ## Per-workflow estimates
 
 | Workflow | VRAM (full speed) | System RAM | Largest phase | Largest file |
@@ -42,9 +54,16 @@ Measured on ComfyUI 0.43.0. Plain weights load at 1.00x the file size. LoRAs pat
 | Ideogram 4 | 24 GB | 32 GB | sampling 19.29 GiB | two UNETs 17.29 GiB together |
 | Krea 2 | 24 GB | 24 GB | sampling 14.57 GiB | UNET 12.57 GiB |
 | LTX 2.5 | 32 GB | 48 GB | sampling 24.96 GiB | transformer 20.03 GiB |
+| LTX 2.5 Extend | 32 GB | 48 GB | sampling 24.96 GiB at 1080p, 5 s new | transformer 20.03 GiB |
+| LTX 2.5 Upscale | 32 GB | 48 GB | sampling 24.96 GiB at 1080p, 121 frames | transformer 20.03 GiB |
 | MiniMax H3 | 32 GB | 64 GB | text encode 25.78 GiB | text encoder 25.28 GiB, measured |
+| MiniMax H3 Extend | 32 GB | 64 GB | text encode 25.78 GiB | text encoder 25.28 GiB |
+| MiniMax H3 Image | 32 GB | 64 GB | text encode 25.78 GiB | text encoder 25.28 GiB |
+| MiniMax H3 Image Fast | 32 GB | 64 GB | text encode 25.78 GiB | text encoder 25.28 GiB |
 | MOSS Image | 12 GB | 24 GB | text encode 9.32 GiB | text encoder 8.82 GiB |
+| MOSS Pose | 12 GB | 24 GB | text encode 9.32 GiB | text encoder 8.82 GiB |
 | Qwen 2.1 | 12 GB | 24 GB | text encode 9.21 GiB | text encoder 8.71 GiB, measured |
+| Qwen 2.1 Outpaint | 12 GB | 24 GB | text encode 9.21 GiB | text encoder 8.71 GiB |
 | Wan 2.2 | 24 GB | 48 GB | sampling 18.35 GiB | Q8 UNET 14.35 GiB |
 | Z-Image | 12 GB | 16 GB | sampling 8.73 GiB | Q8 UNET 6.73 GiB |
 

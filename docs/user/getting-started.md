@@ -4,11 +4,32 @@ Three steps from a fresh ComfyUI to a model in the app.
 
 ## 1. Install the pack
 
-- Open ComfyUI Manager, search for "Unplatform AI Provider" and install it.
-- Restart ComfyUI after the install.
+Install one of these ways, in this order.
 
-ComfyUI 0.43.0 or newer is required. Without the registry, clone or symlink the
-repo into `custom_nodes/unplatform-ai-provider-node` and restart.
+### ComfyUI Manager
+
+Open ComfyUI Manager, search for "Unplatform AI Provider" and install it. On new
+ComfyUI installs the Manager is separate. In the ComfyUI venv run:
+
+```bash
+pip install -U --pre comfyui-manager
+```
+
+Start ComfyUI with `--enable-manager`.
+
+### comfy node
+
+```bash
+comfy node install unplatform-ai-provider-node
+```
+
+### git clone
+
+```bash
+git clone https://github.com/jefoce/unplatform-ai-provider-node custom_nodes/unplatform-ai-provider-node
+```
+
+Restart ComfyUI after the install. ComfyUI 0.43.0 or newer is required.
 
 ## 2. Save a workflow
 

@@ -1,6 +1,6 @@
 ---
 name: "moss-image-director"
-description: "Author copy-paste MOSS Image prompts for this app: style-first captions, one @Image 1 reference role, text-to-image and single-reference img2img."
+description: "Author copy-paste MOSS Image prompts for this app: style-first captions, one @Image 1 reference role, text-to-image, single-reference img2img, and depth-controlled pose."
 ---
 
 # MOSS Image Director
@@ -9,14 +9,14 @@ Write the prompt the user actually asked for. Their style wins. Photoreal is one
 
 MOSS Image is a 5B single-stream DiT from OpenMOSS with a Qwen3.5-9B text encoder. It was trained on long, detailed captions, so prompts read like careful image descriptions, not command lists. It renders English and Chinese text well, accepts prompts up to roughly 4K tokens, and works across photoreal, anime, 3D, and illustrated styles.
 
-This skill covers the app's two modes: text-to-image and one img2img reference. It does not cover JSON layout prompts, because this app does not expose layout boxes.
+This skill covers the app's three modes: text-to-image, one img2img reference, and depth-controlled pose. It does not cover JSON layout prompts, because this app does not expose layout boxes.
 
 ## WORKFLOW
 
 Follow these steps in order.
 
 1. **Read the inputs.** Extract the subject, action, setting, requested style, visible text, reference image, and any aspect or framing request. Separate what the user shows from what they only describe.
-2. **Detect the mode.** No reference means text-to-image. One reference means img2img. Two or more references are out of scope for this app. Ask which single reference to use, or pick the one the user describes as primary.
+2. **Detect the mode.** No reference means text-to-image. One reference means img2img. One pose or depth reference with the Pose model means pose. Two or more references are out of scope for this app. Ask which single reference to use, or pick the one the user describes as primary.
 3. **Detect the style.** Name it: photoreal, anime/illustration, 3D/CGI, painterly/stylized, or a named mix. Use explicit cues from the user. If absent, infer from subject and medium cues, but do not silently default to photoreal.
 4. **Build the reference map.** For img2img, assign `@Image 1` exactly one role. Decide what must survive and what may change. Keep that split consistent through the prompt.
 5. **Write.** One coherent caption in the detected style. Move through subject and action, appearance and material, setting and composition, light and palette, medium and style, then any visible text.
@@ -27,6 +27,16 @@ Follow these steps in order.
 ### Text-to-image
 
 No reference. The prompt carries all composition, style, and content. Describe the finished frame directly. The model has no memory of prior turns and no external context.
+
+### Pose with one reference
+
+Model `moss-image-pose`. Image reference 1 is a pose or depth source, label `@Image 1`. A depth preprocessor estimates a depth map and the `moss-control` LoRA applies it. There is no mask, and the full depth map applies.
+
+The prompt describes the target image, not the edit. Write the subject, wardrobe, setting, composition, light and style you want. `@Image 1` controls body pose and depth, not face, hair, clothing or color. If the user wants the same person, describe that person explicitly instead of asking the model to copy the reference. Do not describe the depth map, the preprocessor, or the LoRA. Do not ask for a new pose that the reference does not contain.
+
+| File | Folder | Size | Credit |
+|---|---|---|---|
+| `moss-control.safetensors` | `models/loras` | 298.6 MiB (313,063,368 bytes) | `darask0/MOSS-Image-color-depth-control` |
 
 ### Img2img with one reference
 
@@ -68,6 +78,7 @@ If the exact img2img implementation differs in a future app build, the prompt ru
 
 - Use `@Image 1` only. One reference, one role.
 - Valid roles: subject identity, face and hair, outfit, product shape, pose, composition and palette, or style. Pick one primary role. A second role is allowed only when the user clearly asks for it, and it must not conflict.
+- In pose mode the only valid role is pose and depth. Do not claim that the reference supplies identity, clothing or color.
 - State the role in natural language inside the caption. Example: "The woman in `@Image 1` keeps her face, hair, and red jacket; the scene changes to a rain-soaked neon street."
 - Use only the app label `@Image 1`. Never emit internal model tokens or natural-language image numbering. The app converts `@Image 1` under the hood.
 - Never invent `@Image 2`. Never use `@Video` or `@Audio` with this model.
@@ -110,6 +121,20 @@ Worked example:
 A flat screen-printed travel poster in muted cream, terracotta, and deep teal. A red pagoda stands among maple trees before a pale sun and layered blue mountains. The composition is centered and vertical, with generous margins and subtle paper grain. At the top, large bold cream uppercase letters read "KYOTO". Below the artwork, smaller dark teal text reads "AUTUMN LANTERN FESTIVAL", and on the next line in red "November 3 - 9, 2026".
 ```
 
+### Pose
+
+```text
+[Medium and style sentence.] [Subject, wardrobe and expression, described from scratch.] [Setting.] [Pose and body angle taken from @Image 1, plus the camera and framing.] [Lighting and palette.] [Optional visible text.]
+```
+
+Worked example:
+
+```text
+A soft 3D character render in warm clay materials and muted earth colors. A stocky baker in a flour-dusted apron leans forward with both hands on a wooden counter, shoulders level and feet apart. The bakery interior has tiled walls, a copper oven and a window full of morning light. Take the lean and the arm placement from @Image 1, and keep the camera at chest height with the subject centered. Warm side light from the left, soft shadows, cream and terracotta palette.
+```
+
+The pose reference must match the requested pose. Do not ask the prompt to bend the body into a pose the reference does not show.
+
 ### Img2img
 
 ```text
@@ -128,7 +153,7 @@ For img2img, put the preserved facts before the changes. Put the largest visual 
 
 Before returning, verify:
 
-- Mode is correct. No reference means no `@Image 1`. One reference means exactly one `@Image 1`.
+- Mode is correct. No reference means no `@Image 1`. One reference means exactly one `@Image 1`. In pose mode, `@Image 1` supplies pose and depth only, and the prompt describes the person and scene.
 - Reference role is explicit and singular. Preserve and change lists do not contradict each other.
 - Style is the user's style, not a default. The medium is named. Photoreal appears only when requested or clearly implied.
 - The caption describes a visible image, with no request verbs, settings, seeds, or model talk.
@@ -138,4 +163,4 @@ Before returning, verify:
 - No internal reference tokens. Only `@Image 1` if a reference exists.
 - Copy-paste ready: no brackets, no placeholders, no notes, no explanation around the prompt.
 
-Uncertain: exact img2img latent handling in this app's build, behavior of scripts other than English and Chinese, and the unofficial claim about SFT face styling on short prompts.
+Uncertain: exact img2img latent handling in this app's build, how strongly the depth map constrains identity in pose mode, behavior of scripts other than English and Chinese, and the unofficial claim about SFT face styling on short prompts.

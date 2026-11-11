@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.1.1 - 2026-11-11
+
+### Added
+
+- New models and modes: LTX 2.5 Extend, LTX 2.5 Upscale, MiniMax H3 Fast, MiniMax H3 Extend, MiniMax H3 Image, MiniMax H3 Image Fast, MOSS Pose and Qwen 2.1 Outpaint.
+- Publish check for workflows that cannot be saved as a model.
+
+### Changed
+
+- Unified model descriptions across the app and the docs.
+- Compatibility fixes.
+- ComfyUI Manager install docs, including the separate Manager install on new ComfyUI versions.
+
+### Fixed
+
+- Registry publish.
+
 ## 0.1.0 - 2026-11-10
 
 First release.

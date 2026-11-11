@@ -357,16 +357,23 @@ is a re-run: the workflow continues, skips the "must be greater" check and reuse
 the existing tag and release. A tag at another commit fails. A missing token
 fails after the tag and release exist, so adding the secret and re-running the
 workflow publishes. Before publishing, the workflow reads the registry versions
-endpoint and skips the publish when the version is already published. Never tag
-or release by hand.
+endpoint and skips the publish when the version is already published. The publish
+step installs `comfy-cli==1.25.0`, sets `DO_NOT_TRACK=1` and runs
+`comfy node publish --token "$REGISTRY_ACCESS_TOKEN"`. Never tag or release by
+hand.
 
 First release:
 
 1. The publisher id is `jefoce` in `[tool.comfy]`.
-2. Create a Comfy Registry API key on the registry account page and store it as
-   the `REGISTRY_ACCESS_TOKEN` repository secret.
+2. Create an API key at `https://registry.comfy.org`, on the publisher page under
+   API keys, and store it as the `REGISTRY_ACCESS_TOKEN` repository secret.
 3. Let the release workflow publish. Never run `comfy node publish` locally.
    Registry versions are immutable.
+4. A new version stays `NodeVersionStatusPending` until the registry scan passes.
+   Check it with
+   `curl -s https://api.comfy.org/nodes/unplatform-ai-provider-node/versions`.
+   ComfyUI Manager installs only active versions, so a pending or failed version
+   is not offered there.
 
 The `validate` job runs `comfy node validate` with `comfy-cli==1.25.0`, and
 `checks-ok` requires it.
