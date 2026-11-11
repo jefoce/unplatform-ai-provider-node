@@ -62,7 +62,7 @@
 <tr>
 <td width="90" align="center"><a href="workflows/minimax-h3-readme.md"><img src="docs/images/minimax-h3.png" width="64" alt=""></a></td>
 <td>MiniMax H3<br><small>MiniMax H3 Fast<br>MiniMax H3 Extend<br>MiniMax H3 Image<br>MiniMax H3 Image Fast</small></td>
-<td>Video, image</td>
+<td>Video, Image</td>
 <td>Text-to-video / image-to-video with up to 9 image, 3 video and 3 audio references.<br>Fast text-to-video / image-to-video with up to 9 image, 3 video and 3 audio references.<br>Video-to-video extend by up to 15 seconds with 1 video reference. Audio continues.<br>Text-to-image / image-to-image with up to 16 references.<br>Fast 2-step text-to-image / image-to-image with up to 16 references.</td>
 <td>32 GB</td>
 <td><a href="workflows/minimax-h3-upai.json">JSON</a><br><a href="workflows/minimax-h3-readme.md">Guide</a><br><a href="workflows/minimax-h3-skill.md">Skill</a></td>
